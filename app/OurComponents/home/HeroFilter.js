@@ -35,6 +35,104 @@ const HeroFilter = () => {
         "$6,000",
       ],
     },
+    {
+      label: "Models",
+      options: ["Select Models", "A3 Sportback", "A4", "A6", "Q5"],
+    },
+    {
+      label: "Price",
+      options: [
+        "All Price",
+        "No max Price",
+        "$2,000",
+        "$5,000",
+        "$10,000",
+        "$15,000",
+        "$6,000",
+      ],
+    },
+    {
+      label: "Models",
+      options: ["Select Models", "A3 Sportback", "A4", "A6", "Q5"],
+    },
+    {
+      label: "Price",
+      options: [
+        "All Price",
+        "No max Price",
+        "$2,000",
+        "$5,000",
+        "$10,000",
+        "$15,000",
+        "$6,000",
+      ],
+    },
+    {
+      label: "Models",
+      options: ["Select Models", "A3 Sportback", "A4", "A6", "Q5"],
+    },
+    {
+      label: "Price",
+      options: [
+        "All Price",
+        "No max Price",
+        "$2,000",
+        "$5,000",
+        "$10,000",
+        "$15,000",
+        "$6,000",
+      ],
+    },
+    {
+      label: "Models",
+      options: ["Select Models", "A3 Sportback", "A4", "A6", "Q5"],
+    },
+    {
+      label: "Price",
+      options: [
+        "All Price",
+        "No max Price",
+        "$2,000",
+        "$5,000",
+        "$10,000",
+        "$15,000",
+        "$6,000",
+      ],
+    },
+    {
+      label: "Models",
+      options: ["Select Models", "A3 Sportback", "A4", "A6", "Q5"],
+    },
+    {
+      label: "Price",
+      options: [
+        "All Price",
+        "No max Price",
+        "$2,000",
+        "$5,000",
+        "$10,000",
+        "$15,000",
+        "$6,000",
+      ],
+    },
+    {
+      label: "Models",
+      options: ["Select Models", "A3 Sportback", "A4", "A6", "Q5"],
+    },
+    {
+      label: "Price",
+      options: [
+        "All Price",
+        "No max Price",
+        "$2,000",
+        "$5,000",
+        "$10,000",
+        "$15,000",
+        "$6,000",
+      ],
+    },
+
+
   ];
 
   const handleStatusClick = (status) => {
@@ -43,7 +141,7 @@ const HeroFilter = () => {
 
   return (
     <div className="col-lg-12">
-      <ul className="nav nav-pills justify-content-center">
+      {/* <ul className="nav nav-pills justify-content-center">
         <li className="nav-item" role="presentation">
           <button
             className={`nav-link ${selectedStatus === "All Status" && "active"
@@ -69,7 +167,7 @@ const HeroFilter = () => {
             New Cars
           </button>
         </li>
-      </ul>
+      </ul> */}
 
       {/* filter tabs */}
       <div className="adss_bg_stylehome1">
@@ -91,9 +189,9 @@ const HeroFilter = () => {
                   </div>
                 </li>
               ))}
-
+            <br />
             {/* Search button */}
-            <li className="list-inline-item">
+            <li className="list-inline-item mt-3">
               <div className="d-block">
                 <button
                   onClick={() => router.push("/listing-v4")}
