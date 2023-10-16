@@ -36,7 +36,7 @@ const listingCar = [
   },
   {
     id: 3,
-    image: "/images/item/1.png",
+    image: "/images/item/3.png",
     photosCount: 12,
     videosCount: 3,
     title: "Ferrari 488 Spider Base - 2019",
@@ -50,7 +50,7 @@ const listingCar = [
   },
   {
     id: 4,
-    image: "/images/item/1.png",
+    image: "/images/item/4.png",
     photosCount: 12,
     videosCount: 3,
     title: "Ferrari 488 Spider Base - 2019",
@@ -64,7 +64,7 @@ const listingCar = [
   },
   {
     id: 5,
-    image: "/images/item/2.png",
+    image: "/images/item/5.png",
     photosCount: 12,
     videosCount: 3,
     title: "Ferrari 488 Spider Base - 2019",

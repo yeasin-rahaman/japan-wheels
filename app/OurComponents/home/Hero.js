@@ -48,7 +48,7 @@ const Hero = () => {
                     className="slide slide_image"
                     style={{
                       backgroundImage: `url(${slide.image})`,
-                      height: "900px",
+                      height: "100vh",
                     }}
                   >
                     <div className="container home_fixed_content">
@@ -78,12 +78,12 @@ const Hero = () => {
                                   / Month
                                 </small>
                               </h3>
-                              <Link
+                              {/* <Link
                                 href="/listing-single-v1"
                                 className="btn banner-btn"
                               >
                                 Learn More
-                              </Link>
+                              </Link> */}
                             </div>
                           </div>
                         </div>

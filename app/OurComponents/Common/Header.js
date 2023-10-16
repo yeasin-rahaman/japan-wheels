@@ -19,17 +19,17 @@ const Header = () => {
           </div>
           <Link href="/" className="navbar_brand float-start mt20 dn-md">
             <Image
-              width={140}
-              height={45}
+              width={50}
+              height={50}
               className="logo1 img-fluid"
-              src="/images/header-logo.svg"
+              src="/images/logo.png"
               alt="header-logo.svg"
             />
             <Image
-              width={140}
-              height={45}
+              width={50}
+              height={50}
               className="logo2 img-fluid"
-              src="/images/header-logo2.svg"
+              src="/images/logo.png"
               alt="header-logo2.svg"
             />
           </Link>
@@ -56,6 +56,7 @@ const Header = () => {
                 + <span className="dn-lg">Add Listing</span>
               </Link>
             </li>{" "}
+            {/*
             <li>
               <a href="#" data-bs-toggle="modal" data-bs-target="#logInModal">
                 Login
@@ -70,7 +71,7 @@ const Header = () => {
               <a href="#" data-bs-toggle="modal" data-bs-target="#logInModal">
                 Register
               </a>
-            </li>
+            </li> */}
             <li
               className="sidebar_panel"
               data-bs-toggle="offcanvas"
