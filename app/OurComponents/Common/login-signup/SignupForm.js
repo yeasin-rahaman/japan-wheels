@@ -2,8 +2,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';  // Import Axios for making HTTP requests
 import { REGISTER_URL } from '@/constant/constants';
+import post from '@/utils/post';
+import { getUserInfo } from '@/app/Redux/dataSlice';
+import { useDispatch } from 'react-redux';
 
 const SignupForm = () => {
+  const dispatch = useDispatch();
   const [error, setError] = useState('')
   const [formData, setFormData] = useState({
     name: '',
@@ -38,11 +42,16 @@ const SignupForm = () => {
     };
 
     // Send a POST request to the API  for signup
-    axios.post(REGISTER_URL, payload)
-      .then((response) => {
+    post(REGISTER_URL, payload)
+      .then((res) => {
        
-        console.log('Signup successful', response.data);
-      })
+        if (res?.status === 200) {
+          localStorage.setItem(
+            "jwt_access_token",
+            `Bearer ${res?.data?.token}`
+          );
+          dispatch(getUserInfo());
+        }      })
       .catch((error) => {
         console.error('Error signing up:', error);
       });

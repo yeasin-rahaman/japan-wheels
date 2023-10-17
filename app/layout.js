@@ -36,6 +36,7 @@ export default function RootLayout({ children }) {
   }, []);
 
   return (
+    <Providers>
     <html lang="en">
       {/* <Body cz-shortcut-listen="false"> */}
       <Body cz-shortcut-listen="false">
@@ -63,7 +64,7 @@ export default function RootLayout({ children }) {
 
 
 
-          <Providers>{children}</Providers>
+       {children}
 
 
 
@@ -92,5 +93,6 @@ export default function RootLayout({ children }) {
 
 
     </html>
+    </Providers>
   );
 }

@@ -6,11 +6,11 @@ import { BASE_URL } from "@/constant/constants";
 
 async function post(url, body = {}, authToken = "") {
   try {
-    const AuthStr = localStorage.getItem("token");
+    const authTOKEN = localStorage.getItem("jwt_access_token");
 
     const res = await axios.post(`${url}`, body, {
       headers: {
-        authorization: AuthStr,
+        authorization: authTOKEN,
       },
     });
     return await res;

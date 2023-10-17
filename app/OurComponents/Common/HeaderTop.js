@@ -1,3 +1,5 @@
+import { useDispatch, useSelector } from "react-redux";
+
 const HeaderTop = () => {
   const socialData = [
     {
@@ -21,18 +23,19 @@ const HeaderTop = () => {
   const contactData = [
     {
       icon: "flaticon-phone-call",
-      text: "1-800-458-56987",
+      text: "+81 70-4375-4845",
     },
     {
       icon: "flaticon-map",
-      text: "47 Bakery Street, London, UK",
+      text: "116-002 Arakawa-Ku, Arakawa 3-6-4 Tokyo, Japan",
     },
     {
-      icon: "flaticon-clock",
-      text: "Mon - Fri 8:00 - 18:00",
+      icon: "flaticon-email",
+      text: "mustafa@japanwheels.com",
     },
   ];
-
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.japanwheels?.userInfo);
   return (
     <div className="header_top home3_style dn-992">
       <div className="container">
@@ -64,15 +67,15 @@ const HeaderTop = () => {
                   </li>
                 ))}
                 <li className="list-inline-item">
-                  <a
+                  {user?.name ? <p>Hi {user?.name}</p> : <a
                     href="#"
                     data-bs-toggle="modal"
                     data-bs-target="#logInModal"
                   >
                     Login
-                  </a>
+                  </a>}
                 </li>
-                <li className="list-inline-item">
+                {user?.name ? '' : <li className="list-inline-item">
                   <a
                     href="#"
                     data-bs-toggle="modal"
@@ -80,7 +83,7 @@ const HeaderTop = () => {
                   >
                     Register
                   </a>
-                </li>
+                </li>}
               </ul>
             </div>
           </div>

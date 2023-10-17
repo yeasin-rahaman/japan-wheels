@@ -1,6 +1,8 @@
 "use client";
 import menuItems from "@/data/menuItems";
 import { isParentActive } from "@/utils/isMenuActive";
+import logo from './../../../public/images/logo.png';
+import userImage from "./../../../public/images/userImage.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -70,7 +72,18 @@ const MobileMenu = () => {
                                 data-bs-target="#mobileMenu"
                                 aria-controls="mobileMenu"
                             >
-                                <small>Menu</small>
+                                <small>
+                                    <Image
+                                        width={40}
+                                        height={40}
+                                        style={{
+                                            borderRadius: "50%"
+                                        }}
+                                        className="userImage"
+                                        src={userImage}
+                                        alt="header-logo.svg"
+                                    />
+                                </small>
                                 <span />
                             </a>
                         </div>
@@ -78,10 +91,10 @@ const MobileMenu = () => {
 
                         <div className="mobile_menu_main_logo">
                             <Image
-                                width={140}
-                                height={45}
+                                width={50}
+                                height={50}
                                 priority
-                                src="/images/header-logo2.svg"
+                                src={logo}
                                 alt="brand"
                             />
                         </div>
@@ -104,10 +117,10 @@ const MobileMenu = () => {
                     <div className="pro-header">
                         <Link href="/">
                             <Image
-                                width={140}
-                                height={45}
+                                width={50}
+                                height={50}
                                 priority
-                                src="/images/header-logo.svg"
+                                src={logo}
                                 alt="brand"
                             />
                         </Link>
@@ -166,7 +179,7 @@ const MobileMenu = () => {
                                                                     <Link
                                                                         className={
                                                                             nestedItem.path ==
-                                                                            path
+                                                                                path
                                                                                 ? "active"
                                                                                 : ""
                                                                         }
@@ -190,7 +203,7 @@ const MobileMenu = () => {
                                                         <Link
                                                             className={
                                                                 subItem.path ==
-                                                                path
+                                                                    path
                                                                     ? "active"
                                                                     : ""
                                                             }

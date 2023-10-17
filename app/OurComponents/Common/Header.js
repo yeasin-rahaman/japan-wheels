@@ -2,7 +2,7 @@ import Link from "next/link";
 import MainMenu from "../../components/common/MainMenu";
 import Image from "next/image";
 import HeroFilter from "../../components/home/home-6/HeroFilter";
-
+import userImage from "./../../../public/images/userImage.png"
 const Header = () => {
   return (
     <header className="header-nav menu_style_home_one home6_style transparent main-menu">
@@ -51,27 +51,28 @@ const Header = () => {
                 <span className="flaticon-magnifiying-glass icon vam"></span>
               </a>
             </li>
+
             <li className="add_listing">
               <Link href="/add-listings">
                 + <span className="dn-lg">Add Listing</span>
               </Link>
             </li>{" "}
-            {/*
-            <li>
-              <a href="#" data-bs-toggle="modal" data-bs-target="#logInModal">
-                Login
-              </a>
+
+
+            {/* User image  */}
+            <li className="">
+              <Image
+                width={50}
+                height={50}
+                style={{
+                  borderRadius: "50%"
+                }}
+                className="userImage"
+                src={userImage}
+                alt="header-logo.svg"
+              />
             </li>
-            <li>
-              <a className="pl0 pr0" href="#">
-                |
-              </a>
-            </li>
-            <li>
-              <a href="#" data-bs-toggle="modal" data-bs-target="#logInModal">
-                Register
-              </a>
-            </li> */}
+            {/* User image end   */}
             <li
               className="sidebar_panel"
               data-bs-toggle="offcanvas"
@@ -82,6 +83,7 @@ const Header = () => {
                 <span />
               </a>
             </li>
+
           </ul>
           {/* End header right content */}
 

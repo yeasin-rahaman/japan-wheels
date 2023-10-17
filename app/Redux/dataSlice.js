@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { GET_MENUS_ALL_NESTED, GET_SITESETTINGS } from "../../constant/constants";
+import { GET_SITESETTINGS, GET_USER_INFO } from "../../constant/constants";
 
 export const getAllMenus = () => (dispatch) => {
-  fetch(GET_MENUS_ALL_NESTED)
+  fetch(GET_SITESETTINGS)
     .then((res) => res.json())
     .then((data) => dispatch(setMenus(data.menus)))
     .catch((e) => {
@@ -18,10 +18,25 @@ export const getSiteSetting = () => (dispatch) => {
       console.log(e);
     });
 };
+export const getUserInfo = () => (dispatch) => {
+	const authTOKEN = {
+		headers: {
+			'Content-type': 'application/json',
+			Authorization: localStorage.getItem('jwt_access_token')
+		}
+	};
+  fetch(GET_USER_INFO,authTOKEN)
+    .then((res) => res.json())
+    .then((data) => dispatch(setUserInfo(data)))
+    .catch((e) => {
+      console.log(e);
+    });
+};
 
 const initialState = {
   menus: [],
   siteSetting: [],
+  userInfo:{}
 };
 
 const dataSlice = createSlice({
@@ -34,8 +49,11 @@ const dataSlice = createSlice({
     setSiteSetting: (state, action) => {
       state.siteSetting = action.payload ? action.payload : [];
     },
+    setUserInfo: (state,action) => {
+      state.userInfo = action.payload ? action.payload : {};
+    },
   },
 });
 
-export const { setMenus, setSiteSetting } = dataSlice.actions;
+export const { setMenus, setSiteSetting,setUserInfo } = dataSlice.actions;
 export default dataSlice.reducer;

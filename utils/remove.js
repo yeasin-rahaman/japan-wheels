@@ -3,11 +3,11 @@ import { rootUrl } from "../constants/constants";
 // import history from "./history";
 async function remove(url, authToken = "") {
   try {
-    const AuthStr = localStorage.getItem("token");
+    const authTOKEN = localStorage.getItem("jwt_access_token");
 
     const res = await Axios.delete(`${rootUrl}${url}`, {
       headers: {
-        authorization: AuthStr,
+        authorization: authTOKEN,
       },
     });
     return await res?.data?.message;
