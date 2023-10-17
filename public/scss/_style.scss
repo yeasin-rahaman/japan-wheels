@@ -27928,3 +27928,32 @@ input.quantity-num[type="number"]::-webkit-outer-spin-button {
   border-radius: 8px;
   overflow: hidden;
 }
+
+
+
+
+// Whatsapp Button 
+
+#fixedbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  padding: .5rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  outline: 0;
+  border: 0;
+  color: white;
+  background-color: #ffffff;
+  z-index: 9999;
+}
+
+.btn-shadow {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}

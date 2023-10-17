@@ -3,8 +3,8 @@ import Aos from "aos";
 import { useEffect } from "react";
 import { Inter } from "next/font/google";
 import "aos/dist/aos.css";
+import { Providers } from "./Redux/provider";
 import "../public/scss/main.scss";
-import ScrollToTop from "./OurComponents/Common/ScrollTop.jsx";
 import styled from "styled-components";
 import Footer from "./OurComponents/home/Footer";
 import LoginSignupModal from "./OurComponents/Common/login-signup";
@@ -12,6 +12,8 @@ import HeaderSidebar from "./OurComponents/Common/HeaderSidebar";
 import HeaderTop from "./OurComponents/Common/HeaderTop";
 import Header from "./OurComponents/Common/Header";
 import MobileMenu from "./OurComponents/Common/MobileMenu";
+import WhatsappButton from "./OurComponents/Common/WhatsappButton";
+
 
 if (typeof window !== "undefined") {
   import("bootstrap");
@@ -35,6 +37,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      {/* <Body cz-shortcut-listen="false"> */}
       <Body cz-shortcut-listen="false">
         <div className="wrapper ovh">
           {/* Sidebar Panel Start */}
@@ -60,7 +63,7 @@ export default function RootLayout({ children }) {
 
 
 
-          {children}
+          <Providers>{children}</Providers>
 
 
 
@@ -81,7 +84,8 @@ export default function RootLayout({ children }) {
             <LoginSignupModal />
           </div>
           {/* End Modal */}
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
+          <WhatsappButton />
         </div>
 
       </Body>

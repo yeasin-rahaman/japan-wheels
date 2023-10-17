@@ -1,11 +1,13 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { getSiteSetting } from "../../Redux/dataSlice";
 
 
 const Hero = () => {
@@ -26,7 +28,13 @@ const Hero = () => {
       price: "$976",
     },
   ];
-
+  const dispatch = useDispatch();
+  //for sitesetting
+  useEffect(() => {
+    dispatch(getSiteSetting());
+  }, []);
+    const siteSetting = useSelector((state) => state.japanwheels?.siteSetting[0]);
+console.log(`siteSetting`,siteSetting)
   return (
     <div className="home-one home-six mt70-992 ovh pt0-sm">
       <div className="container-fluid p0">
