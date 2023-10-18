@@ -29,8 +29,7 @@ export const getUserInfo = () => (dispatch) => {
     .then((res) => res.json())
     .then((data) => dispatch(setUserInfo(data)))
     .catch((e) => {
-      console.log(e);
-    });
+      dispatch(setUserInfo({}))    });
 };
 
 const initialState = {

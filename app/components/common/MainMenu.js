@@ -51,7 +51,7 @@ const MainMenu = () => {
                                                         <Link
                                                             className={
                                                                 path ===
-                                                                nestedSubItem.path
+                                                                    nestedSubItem.path
                                                                     ? "active"
                                                                     : ""
                                                             }

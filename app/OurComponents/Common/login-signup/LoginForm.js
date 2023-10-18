@@ -2,12 +2,16 @@
 import axios from "axios";
 import { GET_USER_INFO, LOGIN_URL } from "@/constant/constants";
 import React, { useState } from "react";
+import { useRouter } from 'next/navigation'
+
 import post from "../../../../utils/post";
 import get from "../../../../utils/get";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserInfo } from "@/app/Redux/dataSlice";
 
 const LoginForm = () => {
+  const router = useRouter()
+
   const dispatch = useDispatch();
   const user = useSelector((state) => state.japanwheels?.userInfo);
   console.log(`user`, user);
@@ -31,10 +35,7 @@ const LoginForm = () => {
     };
     post(LOGIN_URL, loginData).then((res) => {
       if (res?.status === 200) {
-        localStorage.setItem(
-          "jwt_access_token",
-          `Bearer ${res?.data?.token}`
-        );
+        localStorage.setItem("jwt_access_token", `Bearer ${res?.data?.token}`);
         dispatch(getUserInfo());
       }
     });

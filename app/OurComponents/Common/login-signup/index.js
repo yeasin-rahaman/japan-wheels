@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 const tabs = [
   {
@@ -32,12 +33,20 @@ const tabs = [
 ];
 
 const LoginSignupModal = () => {
+  const user = useSelector((state) => state.japanwheels?.userInfo);
+  useEffect(() => {
+    if(user?.name){
+      document.getElementById('closeButton').click()
+    }
+  }, [user]);
+
   return (
     <div className="modal-dialog modal-dialog-centered">
       <div className="modal-content">
         <div className="modal-header">
           <button
             type="button"
+            id="closeButton"
             className="btn-close"
             data-bs-dismiss="modal"
             aria-label="Close"

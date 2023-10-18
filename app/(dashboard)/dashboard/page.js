@@ -27,7 +27,7 @@ const Dashboard = () => {
       {/* Sidebar Panel End */}
 
       {/* header top */}
-      <DashboardHeaderTop />
+      {/* <DashboardHeaderTop /> */}
       {/* End header top */}
 
       {/* Main Header Nav */}

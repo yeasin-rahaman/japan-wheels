@@ -1,3 +1,5 @@
+import { getUserInfo } from "@/app/Redux/dataSlice";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const HeaderTop = () => {
@@ -40,6 +42,9 @@ const HeaderTop = () => {
   ];
   const dispatch = useDispatch();
   const user = useSelector((state) => state.japanwheels?.userInfo);
+  useEffect(() => {
+   dispatch(getUserInfo());
+  }, [dispatch]);
   return (
     <div className="header_top home3_style dn-992">
       <div className="container">

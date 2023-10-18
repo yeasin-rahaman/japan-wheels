@@ -2,8 +2,13 @@ import Link from "next/link";
 import MainMenu from "../../components/common/MainMenu";
 import Image from "next/image";
 import HeroFilter from "../../components/home/home-6/HeroFilter";
-import userImage from "./../../../public/images/userImage.png"
+import userImage from "./../../../public/images/userImage.png";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserInfo } from "@/app/Redux/dataSlice";
 const Header = () => {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.japanwheels?.userInfo);
+
   return (
     <header className="header-nav menu_style_home_one home6_style transparent main-menu">
       {/* Ace Responsive Menu */}
@@ -51,27 +56,44 @@ const Header = () => {
                 <span className="flaticon-magnifiying-glass icon vam"></span>
               </a>
             </li>
-
             <li className="add_listing">
               <Link href="/add-listings">
                 + <span className="dn-lg">Add Listing</span>
               </Link>
             </li>{" "}
 
-
-            {/* User image  */}
-            <li className="">
+            {/* User Img Start  */}
+            {user?.name && <li className="dropitem">
               <Image
                 width={50}
                 height={50}
                 style={{
-                  borderRadius: "50%"
+                  borderRadius: "50%",
                 }}
                 className="userImage"
                 src={userImage}
                 alt="header-logo.svg"
               />
-            </li>
+              <ul className="sub-menu">
+                <li className="dropitem ">
+                  <Link href="/profile" className="active ">
+                    <span className="text-dark">Profile</span>
+                  </Link>
+                </li>
+                <li className="dropitem">
+                  <Link
+                    href="/"
+                    className="active"
+                    onClick={() => {
+                      localStorage.clear();
+                      dispatch(getUserInfo());
+                    }}
+                  >
+                    <span className="text-dark">Logout</span>
+                  </Link>
+                </li>
+              </ul>
+            </li>}
             {/* User image end   */}
             <li
               className="sidebar_panel"
@@ -83,7 +105,6 @@ const Header = () => {
                 <span />
               </a>
             </li>
-
           </ul>
           {/* End header right content */}
 
