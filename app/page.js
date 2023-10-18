@@ -2,8 +2,8 @@ import Home from "./(home)/Home";
 import Wrapper from "./layout/wrapper";
 
 export const metadata = {
-  title: "Home-1 || Voiture - Automotive & Car Dealer NextJS Template",
-  description: `Voiture - Automotive & Car Dealer NextJS Template. `,
+  title: "Japan Whells",
+  description: `Shop Japanese used cars at Japan Wheels - We Deliver Dreams `,
 };
 
 export default function MainRoot() {

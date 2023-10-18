@@ -12,7 +12,7 @@ import Counter from "@/app/OurComponents/Common/Counter";
 
 export const metadata = {
     title: "Home || Voiture - Automotive & Car Dealer NextJS Template",
-    description: `Voiture - Automotive & Car Dealer NextJS Template. `,
+    description: `Shop Japanese used cars at Japan Wheels - We Deliver Dreams `,
 };
 
 

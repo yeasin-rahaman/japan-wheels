@@ -23,16 +23,20 @@ const HeaderTop = () => {
   const contactData = [
     {
       icon: "flaticon-phone-call",
-      text: "+81 70-4375-4845",
-    },
-    {
-      icon: "flaticon-map",
-      text: "116-002 Arakawa-Ku, Arakawa 3-6-4 Tokyo, Japan",
+      text: "+8170-4375-4845",
+      href: "tel:+8170-4375-4845"
     },
     {
       icon: "flaticon-email",
       text: "mustafa@japanwheels.com",
+      href: "mailto:mustafa@japanwheels.com"
     },
+    {
+      icon: "flaticon-map",
+      text: "116-002 Arakawa-Ku, Arakawa 3-6-4 Tokyo, Japan",
+      href: ""
+    },
+
   ];
   const dispatch = useDispatch();
   const user = useSelector((state) => state.japanwheels?.userInfo);
@@ -40,12 +44,12 @@ const HeaderTop = () => {
     <div className="header_top home3_style dn-992">
       <div className="container">
         <div className="row">
-          <div className="col-lg-8 col-xl-7">
+          <div className="col-8">
             <div className="header_top_contact_opening_widget text-center text-md-start">
               <ul className="mb0">
                 {contactData.map((contact, index) => (
                   <li className="list-inline-item" key={index}>
-                    <a href="#">
+                    <a href={`${contact?.href}`}>
                       <span className={contact.icon} />
                       {contact.text}
                     </a>
@@ -56,7 +60,7 @@ const HeaderTop = () => {
           </div>
           {/* End .col */}
 
-          <div className="col-lg-4 col-xl-5">
+          <div className="col-4">
             <div className="header_top_social_widgets text-center text-md-end">
               <ul className="m0">
                 {socialData.map((social, index) => (
