@@ -41,6 +41,7 @@ const Partner = () => {
         grabCursor={false}
         centeredSlides={false}
         slidesPerView={"auto"}
+        loop={true}
         hashNavigation={{
           watchState: true,
         }}
