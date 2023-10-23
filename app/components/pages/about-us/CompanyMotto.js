@@ -5,7 +5,7 @@ const CompanyMotto = () => {
     <>
       <div>
         <h1 style={{ textAlign: "center", margin: "100px" }}>
-          <em>"Driven by Diversity, Powered by Quality."</em>
+          <em>Driven by Diversity, Powered by Quality.</em>
         </h1>
         <Image
           width={1900}
