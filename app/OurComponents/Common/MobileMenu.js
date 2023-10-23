@@ -1,7 +1,7 @@
 "use client";
 import menuItems from "@/data/menuItems";
 import { isParentActive } from "@/utils/isMenuActive";
-import logo from './../../../public/images/logo.png';
+import logo from './../../../public/images/logo.svg';
 import userImage from "./../../../public/images/userImage.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -62,7 +62,7 @@ const MobileMenu = () => {
 
     return (
         <>
-            <div className="stylehome1 h0">
+            <div className="stylehome1 h0 transparent">
                 <div className="mobile-menu">
                     <div className="header stylehome1">
                         <div className="mobile_menu_bar">
@@ -91,8 +91,8 @@ const MobileMenu = () => {
 
                         <div className="mobile_menu_main_logo">
                             <Image
-                                width={50}
-                                height={50}
+                                width={100}
+                                height={100}
                                 priority
                                 src={logo}
                                 alt="brand"
@@ -117,8 +117,8 @@ const MobileMenu = () => {
                     <div className="pro-header">
                         <Link href="/">
                             <Image
-                                width={50}
-                                height={50}
+                                width={100}
+                                height={100}
                                 priority
                                 src={logo}
                                 alt="brand"

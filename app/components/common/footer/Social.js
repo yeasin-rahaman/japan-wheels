@@ -2,19 +2,19 @@ const Social = () => {
   const socialIcons = [
     {
       icon: "fab fa-facebook-f",
-      link: "#",
+      link: "http://www.facebook.com/JapanWheelsWorldwide",
     },
     {
-      icon: "fab fa-twitter",
-      link: "#",
+      icon: "fab fa-tiktok",
+      link: "https://www.tiktok.com/@japanwheels.com?lang=en",
     },
     {
       icon: "fab fa-instagram",
-      link: "#",
+      link: "https://www.instagram.com/japanwheels_worldwide/",
     },
     {
       icon: "fab fa-linkedin",
-      link: "#",
+      link: "https://www.linkedin.com/in/mustafa-khan-303266265/",
     },
   ];
 

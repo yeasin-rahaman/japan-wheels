@@ -19,16 +19,16 @@ const Header = () => {
           <Link href="/" className="navbar_brand float-start dn-md">
             <Image
               width={140}
-              height={45}
+              height={50}
               className="logo1 img-fluid"
-              src="/images/logo.png"
+              src="/images/logo.svg"
               alt="header-logo.svg"
             />
             <Image
               width={140}
-              height={45}
+              height={50}
               className="logo2 img-fluid"
-              src="/images/logo.png"
+              src="/images/logo.svg"
               alt="header-logo2.svg"
             />
           </Link>

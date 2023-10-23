@@ -1,14 +1,14 @@
-import Footer from "@/app/components/common/Footer";
-import DefaultHeader from "../../components/common/DefaultHeader";
 import HeaderSidebar from "../../components/common/HeaderSidebar";
-import HeaderTop from "../../components/common/HeaderTop";
-import MobileMenu from "../../components/common/MobileMenu";
-import AboutTextBlock from "@/app/components/pages/about-us/AboutTextBlock";
+
 import WhyChoose from "@/app/components/common/WhyChoose";
-import Team from "@/app/components/common/Team";
+
 import Testimonial from "@/app/OurComponents/Common/Testimonial";
 import Partner from "@/app/OurComponents/home/Partner";
 import LoginSignupModal from "@/app/components/common/login-signup";
+import CompanyProfile from "@/app/components/pages/about-us/CompanyProfile";
+import CeoMessage from "@/app/components/pages/about-us/CeoMessage";
+import CompanyPolicy from "@/app/components/pages/about-us/CompanyPolicy";
+import CompanyMotto from "@/app/components/pages/about-us/CompanyMotto";
 
 export const metadata = {
   title: "About Us || Voiture - Automotive & Car Dealer NextJS Template",
@@ -26,18 +26,6 @@ const AboutUs = () => {
         <HeaderSidebar />
       </div>
       {/* Sidebar Panel End */}
-
-      {/* header top */}
-      <HeaderTop />
-      {/* End header top */}
-
-      {/* Main Header Nav */}
-      <DefaultHeader />
-      {/* End Main Header Nav */}
-
-      {/* Main Header Nav For Mobile */}
-      <MobileMenu />
-      {/* End Main Header Nav For Mobile */}
 
       {/* Inner Page Breadcrumb */}
       <section className="inner_page_breadcrumb">
@@ -62,18 +50,69 @@ const AboutUs = () => {
       </section>
       {/* Inner Page Breadcrumb */}
 
-      {/* About Text Content */}
-      <section className="about-section pb130">
+      {/* Company Motto */}
+
+      <div data-aos="fade-up" data-aos-delay="80">
+        <CompanyMotto />
+      </div>
+
+      {/* End of Company Motto */}
+
+      {/* Company Profile Content */}
+      <section className="about-section pb90 pt0">
         <div className="container">
-          <div className="row">
-            <AboutTextBlock />
+          <div className="row justify-content-center">
+            <CompanyProfile />
           </div>
         </div>
       </section>
-      {/* End About Text Content */}
+      {/* End Company Profile Content */}
+
+      {/* CEO Message Content */}
+      <section className="about-section pb90 pt0">
+        <div className="container">
+          <div className="row" data-aos="fade-up" data-aos-delay="80">
+            <CeoMessage />
+          </div>
+        </div>
+      </section>
+      {/* CEO Message Content */}
+
+      {/* Testimonials  */}
+      <section className="our-testimonials-home1 pt120 pb120">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <div className="main-title text-center">
+                <h2>Testimonials</h2>
+              </div>
+            </div>
+          </div>
+          <div className="row" data-aos="fade-up" data-aos-delay="80">
+            <div className="col-lg-12">
+              <div className="testimonial_slider_home1">
+                <Testimonial />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* End Testimonials  */}
+
+      {/* Company Policy Content */}
+      <section className="about-section pb90">
+        <div className="container">
+          <div className="row ">
+            <div className="col-lg-12">
+              <CompanyPolicy />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* End Company Policy Content */}
 
       {/* Why Chose Us */}
-      <section className="why-chose pb90 pt0-md">
+      <section className="why-chose pb90 pt0">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8">
@@ -89,60 +128,8 @@ const AboutUs = () => {
       </section>
       {/* End Why Chose Us */}
 
-      {/* Our Team */}
-      <section className="our-team pb90 pt0">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 offset-lg-3">
-              <div className="main-title text-center">
-                <h2>Our Team</h2>
-              </div>
-            </div>
-          </div>
-          {/* End .row */}
-
-          <div className="row">
-            <div className="col-lg-12">
-              <div
-                className="home1_popular_listing home2_style"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                <div className="listing_item_4grid_slider dots_none">
-                  <Team />
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* End Our Team */}
-
-      {/* Testimonials  */}
-      <section className="our-testimonials-home1 pt120 pb120">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <div className="main-title text-center">
-                <h2>Testimonials</h2>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="testimonial_slider_home1">
-                <Testimonial />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* End Testimonials  */}
-
       {/* Our Partners */}
-      <section className="our-partner pb100">
+      <section className="our-partner pb90 pt0">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 offset-lg-3">
@@ -162,10 +149,6 @@ const AboutUs = () => {
         </div>
       </section>
       {/* End  Our Partners */}
-
-      {/* Our Footer */}
-      <Footer />
-      {/* End Our Footer */}
 
       {/* Modal */}
       <div

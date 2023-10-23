@@ -12,8 +12,8 @@ const Footer = () => {
             <div className="footer_about_widget text-start">
               <div className="logo mb40 mb0-sm">
                 <Image
-                  width={80}
-                  height={80}
+                  width={200}
+                  height={40}
                   src="/images/logo.png"
                   alt="header-logo.png"
                 />

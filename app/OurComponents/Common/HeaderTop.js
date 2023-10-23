@@ -20,6 +20,10 @@ const HeaderTop = () => {
       icon: "fab fa-linkedin",
       link: "#",
     },
+    {
+      icon: "fab fa-tiktok",
+      link: "#",
+    },
   ];
 
   const contactData = [
@@ -43,12 +47,12 @@ const HeaderTop = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.japanwheels?.userInfo);
   useEffect(() => {
-   dispatch(getUserInfo());
+    dispatch(getUserInfo());
   }, [dispatch]);
   return (
     <div className="header_top home3_style dn-992">
       <div className="container">
-        <div className="row">
+        <div className="row align-items-center ">
           <div className="col-8">
             <div className="header_top_contact_opening_widget text-center text-md-start">
               <ul className="mb0">

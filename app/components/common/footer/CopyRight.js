@@ -13,7 +13,7 @@ const CopyRight = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                ib-themes
+                innovate-tech
               </a>{" "}
               © {new Date().getFullYear()}. All Rights Reserved.
             </p>

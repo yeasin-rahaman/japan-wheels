@@ -1,5 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { GET_SITESETTINGS, GET_USER_INFO } from "../../constant/constants";
+import {
+  GET_BLOGS,
+  GET_SITESETTINGS,
+  GET_USER_INFO,
+} from "../../constant/constants";
 
 export const getAllMenus = () => (dispatch) => {
   fetch(GET_SITESETTINGS)
@@ -18,24 +22,40 @@ export const getSiteSetting = () => (dispatch) => {
       console.log(e);
     });
 };
+export const getBlogs = () => (dispatch) => {
+  const authTOKEN = {
+    headers: {
+      "Content-type": "application/json",
+      Authorization: localStorage.getItem("jwt_access_token"),
+    },
+  };
+  fetch(GET_BLOGS, authTOKEN)
+    .then((res) => res.json())
+    .then((data) => dispatch(setBlogs(data?.data)))
+    .catch((e) => {
+      console.log(e);
+    });
+};
 export const getUserInfo = () => (dispatch) => {
-	const authTOKEN = {
-		headers: {
-			'Content-type': 'application/json',
-			Authorization: localStorage.getItem('jwt_access_token')
-		}
-	};
-  fetch(GET_USER_INFO,authTOKEN)
+  const authTOKEN = {
+    headers: {
+      "Content-type": "application/json",
+      Authorization: localStorage.getItem("jwt_access_token"),
+    },
+  };
+  fetch(GET_USER_INFO, authTOKEN)
     .then((res) => res.json())
     .then((data) => dispatch(setUserInfo(data)))
     .catch((e) => {
-      dispatch(setUserInfo({}))    });
+      dispatch(setUserInfo({}));
+    });
 };
 
 const initialState = {
   menus: [],
   siteSetting: [],
-  userInfo:{}
+  userInfo: {},
+  blogs: [],
 };
 
 const dataSlice = createSlice({
@@ -48,11 +68,15 @@ const dataSlice = createSlice({
     setSiteSetting: (state, action) => {
       state.siteSetting = action.payload ? action.payload : [];
     },
-    setUserInfo: (state,action) => {
+    setBlogs: (state, action) => {
+      state.blogs = action.payload ? action.payload : [];
+    },
+    setUserInfo: (state, action) => {
       state.userInfo = action.payload ? action.payload : {};
     },
   },
 });
 
-export const { setMenus, setSiteSetting,setUserInfo } = dataSlice.actions;
+export const { setMenus, setSiteSetting, setUserInfo, setBlogs } =
+  dataSlice.actions;
 export default dataSlice.reducer;

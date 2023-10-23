@@ -1,11 +1,19 @@
+import { getBlogs } from "@/app/Redux/dataSlice";
 import blogPosts from "@/data/blog";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const BlogGrid = () => {
+  const dispatch = useDispatch();
+  const blogs = useSelector((state) => state.japanwheels?.blogs);
+  useEffect(() => {
+    dispatch(getBlogs());
+  }, []);
   return (
     <>
-      {blogPosts.map((post) => (
+      {blogs?.map((post) => (
         <div
           key={post.id}
           className="col-md-6 col-xl-4"
@@ -14,7 +22,7 @@ const BlogGrid = () => {
         >
           <div className="for_blog">
             <div className="thumb">
-              <div className="tag">{post.tag}</div>
+              {/* <div className="tag">{post.tag}</div> */}
               <Image
                 width={394}
                 height={254}
@@ -31,19 +39,22 @@ const BlogGrid = () => {
                     <li className="list-inline-item">
                       <a href="#">
                         <span className="flaticon-user" />
-                        {post.author}
+                        {/* {post.author} */}
+                        Saikat
                       </a>
                     </li>
                     <li className="list-inline-item">
                       <a href="#">
                         <span className="flaticon-chat" />
-                        {post.numComments} Comments
+                        {/* {post.numComments}  */}
+                        20 Comments
                       </a>
                     </li>
                     <li className="list-inline-item">
                       <a href="#">
                         <span className="flaticon-calendar-1" />
-                        {post.date}
+                        {/* {post.date} */}
+                        12-02-23
                       </a>
                     </li>
                   </ul>

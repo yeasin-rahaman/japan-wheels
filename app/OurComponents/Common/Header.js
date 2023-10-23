@@ -13,7 +13,7 @@ const Header = () => {
     <header className="header-nav menu_style_home_one home6_style transparent main-menu">
       {/* Ace Responsive Menu */}
       <nav>
-        <div className="container posr d-block">
+        <div className="container posr d-flex justify-content-between  align-content-center ">
           {/* Menu Toggle btn*/}
           <div className="menu-toggle">
             <button type="button" id="menu-btn">
@@ -22,19 +22,19 @@ const Header = () => {
               <span className="icon-bar" />
             </button>
           </div>
-          <Link href="/" className="navbar_brand float-start mt20 dn-md">
+          <Link href="/" className="navbar_brand float-start dn-md">
             <Image
-              width={50}
-              height={50}
+              width={200}
+              height={150}
               className="logo1 img-fluid"
-              src="/images/logo.png"
+              src="/images/logo.svg"
               alt="header-logo.svg"
             />
             <Image
-              width={50}
-              height={50}
+              width={150}
+              height={100}
               className="logo2 img-fluid"
-              src="/images/logo.png"
+              src="/images/logo.svg"
               alt="header-logo2.svg"
             />
           </Link>
@@ -61,39 +61,40 @@ const Header = () => {
                 + <span className="dn-lg">Add Listing</span>
               </Link>
             </li>{" "}
-
             {/* User Img Start  */}
-            {user?.name && <li className="dropitem">
-              <Image
-                width={50}
-                height={50}
-                style={{
-                  borderRadius: "50%",
-                }}
-                className="userImage"
-                src={userImage}
-                alt="header-logo.svg"
-              />
-              <ul className="sub-menu">
-                <li className="dropitem ">
-                  <Link href="/profile" className="active ">
-                    <span className="text-dark">Profile</span>
-                  </Link>
-                </li>
-                <li className="dropitem">
-                  <Link
-                    href="/"
-                    className="active"
-                    onClick={() => {
-                      localStorage.clear();
-                      dispatch(getUserInfo());
-                    }}
-                  >
-                    <span className="text-dark">Logout</span>
-                  </Link>
-                </li>
-              </ul>
-            </li>}
+            {user?.name && (
+              <li className="dropitem">
+                <Image
+                  width={50}
+                  height={50}
+                  style={{
+                    borderRadius: "50%",
+                  }}
+                  className="userImage"
+                  src={userImage}
+                  alt="header-logo.svg"
+                />
+                <ul className="sub-menu">
+                  <li className="dropitem ">
+                    <Link href="#" className="active ">
+                      <span className="text-dark">Profile</span>
+                    </Link>
+                  </li>
+                  <li className="dropitem">
+                    <Link
+                      href="/"
+                      className="active"
+                      onClick={() => {
+                        localStorage.clear();
+                        dispatch(getUserInfo());
+                      }}
+                    >
+                      <span className="text-dark">Logout</span>
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+            )}
             {/* User image end   */}
             <li
               className="sidebar_panel"
