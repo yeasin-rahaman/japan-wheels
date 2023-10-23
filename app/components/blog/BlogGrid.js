@@ -1,3 +1,4 @@
+"use client"
 import { getBlogs } from "@/app/Redux/dataSlice";
 import blogPosts from "@/data/blog";
 import Image from "next/image";
