@@ -12,6 +12,7 @@
     "@faker-js/faker": "^8.0.2",
     "@popperjs/core": "^2.11.7",
     "@reduxjs/toolkit": "^1.9.7",
+    "@tinymce/tinymce-react": "^4.3.0",
     "aos": "^2.3.4",
     "axios": "^1.5.1",
     "bootstrap": "^5.2.3",
