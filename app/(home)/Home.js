@@ -40,7 +40,7 @@ const Home = () => {
         {/* End How It Works with filter */}
 
         {/* Car Category */}
-        <section className="car-category mobile_space bgc-f9  py-0 ">
+        <section className="car-category mobile_space bgc-f9  pb80 ">
           <div className="container">
             <div className="row">
               <Category />
@@ -133,7 +133,7 @@ const Home = () => {
         {/* End Funfact Counter */}
 
         {/* Our Testimonials */}
-        <section className="our-testimonial py-0">
+        <section className="our-testimonial">
           <div className="container">
             <div className="row">
               <div className="col-lg-6 offset-lg-3">
