@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Pagination from "./Pagination";
+import moment from "moment";
 
 const BlogGrid = () => {
   const dispatch = useDispatch();
@@ -29,7 +31,7 @@ const BlogGrid = () => {
                 height={254}
                 style={{ objectFit: "cover" }}
                 className="img-whp"
-                src={post.imgSrc}
+                src={post.image}
                 alt={post.title}
               />
             </div>
@@ -41,7 +43,7 @@ const BlogGrid = () => {
                       <a href="#">
                         <span className="flaticon-user" />
                         {/* {post.author} */}
-                        Saikat
+                        {post?.created_by?.name}
                       </a>
                     </li>
                     <li className="list-inline-item">
@@ -55,15 +57,15 @@ const BlogGrid = () => {
                       <a href="#">
                         <span className="flaticon-calendar-1" />
                         {/* {post.date} */}
-                        12-02-23
+                        {moment(post?.created_at).format("ll")}
                       </a>
                     </li>
                   </ul>
                 </div>
                 <h4 className="title">
-                  <Link href="/blog-single">{post.title}</Link>
+                  <Link href={`/blog-details/${post?.id}`}>{post.title}</Link>
                 </h4>
-                <Link href="/blog-single" className="more_listing">
+                <Link href={`/blog-details/${post?.id}`}className="more_listing">
                   Read More{" "}
                   <span className="icon">
                     <span className="fas fa-plus" />
@@ -74,6 +76,13 @@ const BlogGrid = () => {
           </div>
         </div>
       ))}
+        <div className="row">
+        <div className="col-lg-12">
+          <div className="mbp_pagination mt20">
+            <Pagination /> {/* Assuming Pagination is a valid component */}
+          </div>
+        </div>
+      </div>
     </>
   );
 };

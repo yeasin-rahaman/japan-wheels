@@ -11,6 +11,7 @@ async function post(url, body = {}, authToken = "") {
     const res = await axios.post(`${url}`, body, {
       headers: {
         authorization: authTOKEN,
+        'Content-Type': 'multipart/form-data'
       },
     });
     return await res;

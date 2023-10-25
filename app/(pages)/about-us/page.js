@@ -1,14 +1,11 @@
-import HeaderSidebar from "../../components/common/HeaderSidebar";
-
-import WhyChoose from "@/app/components/common/WhyChoose";
-
+import WhyChoose from "@/app/OurComponents/about-us/WhyChoose";
 import Testimonial from "@/app/OurComponents/Common/Testimonial";
 import Partner from "@/app/OurComponents/home/Partner";
 import LoginSignupModal from "@/app/components/common/login-signup";
-import CompanyProfile from "@/app/components/pages/about-us/CompanyProfile";
-import CeoMessage from "@/app/components/pages/about-us/CeoMessage";
-import CompanyPolicy from "@/app/components/pages/about-us/CompanyPolicy";
-import CompanyMotto from "@/app/components/pages/about-us/CompanyMotto";
+import CompanyProfile from "@/app/OurComponents/about-us/CompanyProfile";
+import CeoMessage from "@/app/OurComponents/about-us/CeoMessage";
+import CompanyPolicy from "@/app/OurComponents/about-us/CompanyPolicy";
+import CompanyMotto from "@/app/OurComponents/about-us/CompanyMotto";
 
 export const metadata = {
   title: "About Us || Voiture - Automotive & Car Dealer NextJS Template",
@@ -17,14 +14,6 @@ export const metadata = {
 const AboutUs = () => {
   return (
     <div className="wrapper">
-      <div
-        className="offcanvas offcanvas-end"
-        tabIndex="-1"
-        id="offcanvasRight"
-        aria-labelledby="offcanvasRightLabel"
-      >
-        <HeaderSidebar />
-      </div>
       {/* Sidebar Panel End */}
 
       {/* Inner Page Breadcrumb */}

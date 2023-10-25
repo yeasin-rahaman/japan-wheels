@@ -5,6 +5,7 @@ import { REGISTER_URL } from '@/constant/constants';
 import post from '@/utils/post';
 import { getUserInfo } from '@/app/Redux/dataSlice';
 import { useDispatch } from 'react-redux';
+import Swal from 'sweetalert2';
 
 const SignupForm = () => {
   const dispatch = useDispatch();
@@ -51,6 +52,13 @@ const SignupForm = () => {
             `Bearer ${res?.data?.token}`
           );
           dispatch(getUserInfo());
+          Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Register Successfully',
+            showConfirmButton: false,
+            timer: 1500
+          })
         }      })
       .catch((error) => {
         console.error('Error signing up:', error);

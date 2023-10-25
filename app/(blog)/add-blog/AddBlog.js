@@ -5,8 +5,13 @@ import { Editor } from "@tinymce/tinymce-react";
 import { getBlogs } from "@/app/Redux/dataSlice";
 import { CREATE_BLOG } from "@/constant/constants";
 import post from "@/utils/post";
+import { useRouter } from "next/navigation";
+
+import Swal from "sweetalert2";
 
 const AddBlog = () => {
+  const router = useRouter();
+
   const dispatch = useDispatch();
   const blogs = useSelector((state) => state.japanwheels?.blogs);
   console.log(`blogs`, blogs);
@@ -15,24 +20,42 @@ const AddBlog = () => {
   const [previewImage, setPreviewImage] = useState(null); // To store the image preview URL
   const handleImageChange = (e) => {
     const selectedImage = e.target.files[0];
-    setImage(selectedImage);
 
-    // Create a URL for image preview
-    const imageURL = URL.createObjectURL(selectedImage);
-    setPreviewImage(imageURL);
+    // Read the image file and convert it to Base64
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const base64Image = e.target.result;
+      setImage(base64Image);
+      setPreviewImage(base64Image); // Set the preview image to the Base64 image
+    };
+    reader.readAsDataURL(selectedImage);
   };
   const editorRef = useRef(null);
+  const isFormValid = image && title ;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("title", title);
     formData.append("description", editorRef.current.getContent());
-    formData.append("image", image);
-
+    if (image) {
+      formData.append("image", image);
+    }
     post(CREATE_BLOG, formData).then((res) => {
+      console.log(`res`,res)
       if (res?.status === 200) {
+        setTitle('');
+        setImage(null);
+        setPreviewImage(null);
+        Swal.fire({
+          position: 'top-center',
+          icon: 'success',
+          title: 'Blog add successfully',
+          showConfirmButton: false,
+          timer: 1500
+        })
         dispatch(getBlogs());
+        router.push("/blogs")
       }
     });
   };
@@ -123,7 +146,7 @@ const AddBlog = () => {
         )}
 
         <div className="col-md-12 my-3 mx-auto text-center">
-          <button type="submit" className="btn btn-thm">
+          <button type="submit" disabled={!isFormValid} className="btn btn-thm">
             Post Blog
           </button>
         </div>

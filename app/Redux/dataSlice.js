@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
+  GET_BLOG,
   GET_BLOGS,
   GET_SITESETTINGS,
   GET_USER_INFO,
@@ -36,6 +37,21 @@ export const getBlogs = () => (dispatch) => {
       console.log(e);
     });
 };
+
+export const getBlog = (id) => (dispatch) => {
+  const authTOKEN = {
+    headers: {
+      "Content-type": "application/json",
+      Authorization: localStorage.getItem("jwt_access_token"),
+    },
+  };
+  fetch(`${GET_BLOG}/${id}`, authTOKEN)
+    .then((res) => res.json())
+    .then((data) => dispatch(setBlog(data?.data)))
+    .catch((e) => {
+      console.log(e);
+    });
+};
 export const getUserInfo = () => (dispatch) => {
   const authTOKEN = {
     headers: {
@@ -56,6 +72,7 @@ const initialState = {
   siteSetting: [],
   userInfo: {},
   blogs: [],
+  blog: {},
 };
 
 const dataSlice = createSlice({
@@ -71,12 +88,15 @@ const dataSlice = createSlice({
     setBlogs: (state, action) => {
       state.blogs = action.payload ? action.payload : [];
     },
+    setBlog: (state, action) => {
+      state.blog = action.payload ? action.payload : {};
+    },
     setUserInfo: (state, action) => {
       state.userInfo = action.payload ? action.payload : {};
     },
   },
 });
 
-export const { setMenus, setSiteSetting, setUserInfo, setBlogs } =
+export const { setMenus, setSiteSetting, setUserInfo, setBlogs,setBlog } =
   dataSlice.actions;
 export default dataSlice.reducer;

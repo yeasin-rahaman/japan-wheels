@@ -40,7 +40,7 @@ const Home = () => {
         {/* End How It Works with filter */}
 
         {/* Car Category */}
-        <section className="car-category mobile_space bgc-f9  pb80 ">
+        <section className="car-category mobile_space bgc-f9  pb80 pt80">
           <div className="container">
             <div className="row">
               <Category />
@@ -70,7 +70,7 @@ const Home = () => {
         {/* End Our CarType  */}
 
         {/* Our Popular Listing */}
-        <section className="popular-listing pt0 pb80 ">
+        <section className="popular-listing pt80 pb80 ">
           <div className="container-fluid">
             <div className="row">
               <div className="col-lg-6 offset-lg-3">
@@ -97,7 +97,7 @@ const Home = () => {
         {/* End Our Popular Listing */}
 
         {/* Our Partners */}
-        <section className="our-partner pt0 pb80">
+        <section className="our-partner pt80 pb80">
           <div className="container">
             <div className="row">
               <div className="col-lg-6 offset-lg-3">
@@ -123,7 +123,7 @@ const Home = () => {
         {/* Half Bg Img Divider  */}
 
         {/* Funfact Counter  */}
-        <section className="our-funfact pb80">
+        <section className="our-funfact pt80 pb80">
           <div className="container">
             <div className="row">
               <Counter />
@@ -133,7 +133,7 @@ const Home = () => {
         {/* End Funfact Counter */}
 
         {/* Our Testimonials */}
-        <section className="our-testimonial">
+        <section className="our-testimonial pb80 pt80">
           <div className="container">
             <div className="row">
               <div className="col-lg-6 offset-lg-3">
@@ -156,7 +156,7 @@ const Home = () => {
         {/* End Our Testimonials */}
 
         {/* Our Blog */}
-        <section className="our-blog pb80">
+        <section className="our-blog pb80 pt80">
           <div className="container">
             <div className="row">
               <div className="col-lg-6 offset-lg-3">

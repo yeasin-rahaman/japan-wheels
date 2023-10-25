@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const IntroCar = () => {
   return (
-    <section className="half-bg-img-divider">
+    <section className="half-bg-img-divider pb80 pt80">
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-xl-7" />

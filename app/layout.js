@@ -12,7 +12,7 @@ import HeaderTop from "./OurComponents/Common/HeaderTop";
 import Header from "./OurComponents/Common/Header";
 import MobileMenu from "./OurComponents/Common/MobileMenu";
 import WhatsappButton from "./OurComponents/Common/WhatsappButton";
-import Footer from "./OurComponents/Common/Footer";
+import Footer from "./OurComponents/Common/footer/Footer";
 
 
 if (typeof window !== "undefined") {
@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
     <Providers>
       <html lang="en">
         {/* <Body cz-shortcut-listen="false"> */}
-        <Body cz-shortcut-listen="false">
+        <Body >
           <div className="wrapper ovh">
             {/* Sidebar Panel Start */}
 

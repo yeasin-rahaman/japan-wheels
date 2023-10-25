@@ -8,6 +8,7 @@ import post from "../../../../utils/post";
 import get from "../../../../utils/get";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserInfo } from "@/app/Redux/dataSlice";
+import Swal from "sweetalert2";
 
 const LoginForm = () => {
   const router = useRouter()
@@ -37,6 +38,13 @@ const LoginForm = () => {
       if (res?.status === 200) {
         localStorage.setItem("jwt_access_token", `Bearer ${res?.data?.token}`);
         dispatch(getUserInfo());
+        Swal.fire({
+          position: 'top-center',
+          icon: 'success',
+          title: 'Login Successfully',
+          showConfirmButton: false,
+          timer: 1500
+        })
       }
     });
   };

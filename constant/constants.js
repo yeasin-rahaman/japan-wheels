@@ -8,3 +8,4 @@ export const GET_USER_INFO = `${BASE_URL}/api/user`;
 // Blog
 export const CREATE_BLOG = `${BASE_URL}/api/posts`;
 export const GET_BLOGS = `${BASE_URL}/api/posts`;
+export const GET_BLOG = `${BASE_URL}/api/posts`;

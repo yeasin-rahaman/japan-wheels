@@ -5,6 +5,7 @@ import HeroFilter from "../../components/home/home-6/HeroFilter";
 import userImage from "./../../../public/images/userImage.png";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserInfo } from "@/app/Redux/dataSlice";
+import Swal from "sweetalert2";
 const Header = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.japanwheels?.userInfo);
@@ -87,6 +88,13 @@ const Header = () => {
                       onClick={() => {
                         localStorage.clear();
                         dispatch(getUserInfo());
+                        Swal.fire({
+                          position: 'top-center',
+                          icon: 'success',
+                          title: 'Logout successfully',
+                          showConfirmButton: false,
+                          timer: 1500
+                        })
                       }}
                     >
                       <span className="text-dark">Logout</span>
