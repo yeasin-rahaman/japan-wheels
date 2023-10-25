@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import "swiper/swiper-bundle.css";
 import Image from "next/image";
 
@@ -36,9 +36,14 @@ const Testimonial = () => {
     <>
       <Swiper
         slidesPerView={2}
+        loop={true}
         speed={1000}
+        autoplay={{
+          delay: 2200,
+          disableOnInteraction: true,
+        }}
         spaceBetween={30}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         pagination={{
           el: ".js-pagination-pag",
           spaceBetween: 10,
