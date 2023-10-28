@@ -9,14 +9,12 @@ const CompanyProfile = () => {
           <h1 className="main-title" style={{ textAlign: "center" }}>
             Company Profile
           </h1>
-          <p className="mb30">
+          <p className="mb30" style={{ textAlign: "justify" }}>
             Japan Wheels LLC. is a leading provider of automotive solutions,
             serving customers globally. With a network of locations spanning
             multiple countries, Japan Wheels has established a reputation for
             providing high-quality vehicles and exceptional customer service.
-          </p>
-
-          <p className="mb30">
+            <br />
             Our mission is to make the car-buying experience as simple and
             stress-free as possible, no matter where you are in the world. Our
             knowledgeable sales team works closely with each customer to
@@ -24,9 +22,7 @@ const CompanyProfile = () => {
             that meet their requirements. With a wide range of vehicles from top
             manufacturers and a global network of resources, we are confident
             that we have something for everyone.
-          </p>
-
-          <p className="mb30">
+            <br />
             Japan Wheels understands the importance of reliable logistics and
             international shipping. That’s why we have invested in a top-notch
             logistics and shipping infrastructure to ensure that your vehicle is
@@ -34,9 +30,7 @@ const CompanyProfile = () => {
             handles everything from customs clearance here in Japan to your
             port, so you can rest easy knowing that your vehicle is in good
             hands.
-          </p>
-
-          <p className="mb30">
+            <br />
             At Japan Wheels, we believe in giving back to our community. We are
             proud to support local charities and organizations in Pakistan, and
             are committed to making a positive impact in the lives of those

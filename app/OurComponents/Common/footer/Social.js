@@ -5,6 +5,10 @@ const Social = () => {
       link: "http://www.facebook.com/JapanWheelsWorldwide",
     },
     {
+      icon: "fab fa-twitter",
+      link: "#",
+    },
+    {
       icon: "fab fa-tiktok",
       link: "https://www.tiktok.com/@japanwheels.com?lang=en",
     },

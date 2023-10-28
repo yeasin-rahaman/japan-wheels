@@ -9,14 +9,12 @@ const CompanyProfile = () => {
           <h1 className="main-title" style={{ textAlign: "center" }}>
             Company Profile
           </h1>
-          <p className="mb30">
+          <p className="mb30" style={{ textAlign: "justify" }}>
             Japan Wheels LLC. is a leading provider of automotive solutions,
             serving customers globally. With a network of locations spanning
             multiple countries, Japan Wheels has established a reputation for
             providing high-quality vehicles and exceptional customer service.
-          </p>
-
-          <p className="mb30">
+            <br />
             Our mission is to make the car-buying experience as simple and
             stress-free as possible, no matter where you are in the world. Our
             knowledgeable sales team works closely with each customer to
@@ -24,9 +22,7 @@ const CompanyProfile = () => {
             that meet their requirements. With a wide range of vehicles from top
             manufacturers and a global network of resources, we are confident
             that we have something for everyone.
-          </p>
-
-          <p className="mb30">
+            <br />
             Japan Wheels understands the importance of reliable logistics and
             international shipping. That’s why we have invested in a top-notch
             logistics and shipping infrastructure to ensure that your vehicle is
@@ -34,9 +30,7 @@ const CompanyProfile = () => {
             handles everything from customs clearance here in Japan to your
             port, so you can rest easy knowing that your vehicle is in good
             hands.
-          </p>
-
-          <p className="mb30">
+            <br />
             At Japan Wheels, we believe in giving back to our community. We are
             proud to support local charities and organizations in Pakistan, and
             are committed to making a positive impact in the lives of those
@@ -45,7 +39,6 @@ const CompanyProfile = () => {
             expertise, and international shipping capabilities, we are confident
             that we can meet your needs and exceed your expectations.
           </p>
-
           <div
             data-aos="fade-up"
             data-aos-delay="80"
@@ -61,11 +54,10 @@ const CompanyProfile = () => {
                 }}
               >
                 <h5 class="title">Mission Statement</h5>
-                <p class="card-text" style={{ paddingTop: "7px" }}>
-                  <strong>
-                    Every customer is unique, we fulfill their needs by offering
-                    them our tailor-made solutions.
-                  </strong>
+                <p class="card-text" style={{ textAlign: "justify" }}>
+                  Our mission is to connect the world through wheels, providing
+                  tailored solutions for every unique customer while ensuring
+                  the highest standards of quality and service
                 </p>
               </div>
               <div
@@ -77,15 +69,15 @@ const CompanyProfile = () => {
                 }}
               >
                 <h5 class="title">Vision Statement</h5>
-                <p class="card-text" style={{ paddingTop: "7px" }}>
-                  <strong>
-                    Leading the Way, Inspiring Adventures, Transforming the
-                    World on Wheels.
-                  </strong>
+                <p class="card-text" style={{ textAlign: "justify" }}>
+                  We envision a world where Japan Wheels not only fuels
+                  transportation but also fuels positive change, making a
+                  lasting impact on communities, customers, and the automotive
+                  landscape.
                 </p>
               </div>
               <div
-                className="col-md-3 p-4"
+                className="col-md-3 p-5"
                 style={{
                   border: "1px solid gray",
                   margin: "10px",
@@ -93,34 +85,11 @@ const CompanyProfile = () => {
                 }}
               >
                 <h5 class="title">Company Values</h5>
-                <p class="card-text" style={{ paddingTop: "7px" }}>
-                  <p>
-                    We are passionate about{" "}
-                    <em>
-                      <strong>CARS</strong>
-                    </em>
-                    :
-                  </p>
-                  <ul
-                    style={{
-                      listStyleType: "square",
-                      marginLeft: "20px",
-                      marginBottom: "30px",
-                    }}
-                  >
-                    <li>
-                      <strong>C stands for customer-centric</strong>
-                    </li>
-                    <li>
-                      <strong>A stands for adaptable</strong>
-                    </li>
-                    <li>
-                      <strong>R stands for reliable partner</strong>
-                    </li>
-                    <li>
-                      <strong>S stands for Satisfaction</strong>
-                    </li>
-                  </ul>
+                <p class="card-text" style={{ textAlign: "justify" }}>
+                  Japan Wheels LLC emphasizes diversity, innovative leadership,
+                  global unity, customer-centricity, integrity, and
+                  environmental responsibility, while excelling in logistics and
+                  promoting adaptive resilience.
                 </p>
               </div>
             </div>
@@ -129,18 +98,22 @@ const CompanyProfile = () => {
           <h2 className="main-title" style={{ textAlign: "center" }}>
             Company Statement
           </h2>
-          <p className="mb30" style={{ marginBottom: "0", fontSize: "1.2em" }}>
+          <p
+            className="mb30"
+            style={{
+              marginBottom: "0",
+              fontSize: "1.2em",
+              textAlign: "justify",
+            }}
+          >
             <em>
-              <strong>
-                “Our company is dedicated to providing high-quality automotive
-                products and services to our customers. With a focus on
-                innovation and customer satisfaction, we strive to stay ahead of
-                the competition and offer the latest in automotive technology.
-                From sales to maintenance, our knowledgeable and experienced
-                team is here to help every step of the way. Join us in our
-                commitment to making the automotive industry better for
-                everyone.”
-              </strong>
+              “Our company is dedicated to providing high-quality automotive
+              products and services to our customers. With a focus on innovation
+              and customer satisfaction, we strive to stay ahead of the
+              competition and offer the latest in automotive technology. From
+              sales to maintenance, our knowledgeable and experienced team is
+              here to help every step of the way. Join us in our commitment to
+              making the automotive industry better for everyone.”
             </em>
           </p>
         </div>

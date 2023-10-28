@@ -8,14 +8,7 @@ const CopyRight = () => {
         <div className="col-md-6 col-lg-8 col-xl-9">
           <div className="copyright-widget mt5 text-start mb20-sm">
             <p>
-              <a
-                href="https://themeforest.net/user/ib-themes"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                innovate-tech
-              </a>{" "}
-              © {new Date().getFullYear()}. All Rights Reserved.
+              innovate-tech © {new Date().getFullYear()}. All Rights Reserved.
             </p>
           </div>
         </div>

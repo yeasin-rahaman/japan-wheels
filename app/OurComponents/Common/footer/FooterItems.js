@@ -1,6 +1,6 @@
 const FooterItems = () => {
   return (
-    <div className="row">
+    <div className="row" style={{ justifyContent: "space-between" }}>
       <div className="col-sm-6 col-md-4 col-lg-3 col-xl-3">
         <div className="footer_about_widget">
           <h5 className="title">OFFICE</h5>
@@ -17,7 +17,7 @@ const FooterItems = () => {
 
       <div className="col-sm-6 col-md-4 col-lg-3 col-xl-3">
         <div className="footer_contact_widget">
-          <h5 className="title">NEED HELP</h5>
+          <h5 className="title">NEED HELP ?</h5>
           <div className="footer_phone">+81 70-4375-4845</div>
           <p>mustafa@japanwheels.com</p>
         </div>
@@ -26,7 +26,7 @@ const FooterItems = () => {
 
       {/* End .col */}
 
-      <div className="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+      <div className="col-sm-6 col-md-4 col-lg-3 col-xl-3">
         <div className="footer_contact_widget">
           <h5 className="title">KEEP IN TOUCH</h5>
           <form className="footer_mailchimp_form">

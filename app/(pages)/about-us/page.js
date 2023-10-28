@@ -41,9 +41,9 @@ const AboutUs = () => {
 
       {/* Company Motto */}
 
-      <div data-aos="fade-up" data-aos-delay="80">
+      {/* <div data-aos="fade-up" data-aos-delay="80">
         <CompanyMotto />
-      </div>
+  </div> */}
 
       {/* End of Company Motto */}
 

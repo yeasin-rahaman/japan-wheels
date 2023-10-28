@@ -23,16 +23,16 @@ export const getSiteSetting = () => (dispatch) => {
       console.log(e);
     });
 };
-export const getBlogs = () => (dispatch) => {
+export const getBlogs = (page) => (dispatch) => {
   const authTOKEN = {
     headers: {
       "Content-type": "application/json",
       Authorization: localStorage.getItem("jwt_access_token"),
     },
   };
-  fetch(GET_BLOGS, authTOKEN)
+  fetch(`${GET_BLOGS}?page=${page || 1}&size=21`, authTOKEN)
     .then((res) => res.json())
-    .then((data) => dispatch(setBlogs(data?.data)))
+    .then((data) => dispatch(setBlogs(data)))
     .catch((e) => {
       console.log(e);
     });
@@ -71,7 +71,7 @@ const initialState = {
   menus: [],
   siteSetting: [],
   userInfo: {},
-  blogs: [],
+  blogs: {},
   blog: {},
 };
 

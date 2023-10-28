@@ -6,23 +6,19 @@ const HeaderTop = () => {
   const socialData = [
     {
       icon: "fab fa-facebook-f",
-      link: "#",
-    },
-    {
-      icon: "fab fa-twitter",
-      link: "#",
-    },
-    {
-      icon: "fab fa-instagram",
-      link: "#",
-    },
-    {
-      icon: "fab fa-linkedin",
-      link: "#",
+      link: "http://www.facebook.com/JapanWheelsWorldwide",
     },
     {
       icon: "fab fa-tiktok",
-      link: "#",
+      link: "https://www.tiktok.com/@japanwheels.com?lang=en",
+    },
+    {
+      icon: "fab fa-instagram",
+      link: "https://www.instagram.com/japanwheels_worldwide/",
+    },
+    {
+      icon: "fab fa-linkedin",
+      link: "https://www.linkedin.com/in/mustafa-khan-303266265/",
     },
   ];
 
@@ -30,19 +26,18 @@ const HeaderTop = () => {
     {
       icon: "flaticon-phone-call",
       text: "+8170-4375-4845",
-      href: "tel:+8170-4375-4845"
+      href: "tel:+8170-4375-4845",
     },
     {
       icon: "flaticon-email",
       text: "mustafa@japanwheels.com",
-      href: "mailto:mustafa@japanwheels.com"
+      href: "mailto:mustafa@japanwheels.com",
     },
     {
       icon: "flaticon-map",
       text: "116-002 Arakawa-Ku, Arakawa 3-6-4 Tokyo, Japan",
-      href: ""
+      href: "",
     },
-
   ];
   const dispatch = useDispatch();
   const user = useSelector((state) => state.japanwheels?.userInfo);
@@ -80,23 +75,31 @@ const HeaderTop = () => {
                   </li>
                 ))}
                 <li className="list-inline-item">
-                  {user?.name ? <p>Hi {user?.name}</p> : <a
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#logInModal"
-                  >
-                    Login
-                  </a>}
+                  {user?.name ? (
+                    <p>Hi {user?.name}</p>
+                  ) : (
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#logInModal"
+                    >
+                      Login
+                    </a>
+                  )}
                 </li>
-                {user?.name ? '' : <li className="list-inline-item">
-                  <a
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#logInModal"
-                  >
-                    Register
-                  </a>
-                </li>}
+                {user?.name ? (
+                  ""
+                ) : (
+                  <li className="list-inline-item">
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#logInModal"
+                    >
+                      Register
+                    </a>
+                  </li>
+                )}
               </ul>
             </div>
           </div>
