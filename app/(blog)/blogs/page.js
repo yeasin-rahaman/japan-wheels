@@ -71,7 +71,7 @@ const Blogs = () => {
                 style={{ display: 'none' }}
               />
               <label className="form-check-label cursor-pointer" style={{ cursor: 'pointer' }} htmlFor="gridView">
-                <i className="fa-solid fa-grip-vertical fa-2xl"style={{color:selectedOption==='grid' && 'blue'}}></i>
+                <i className="fa-solid fa-grip-vertical fa-2xl" style={{ color: selectedOption === 'grid' && 'var(--primary-color)' }}></i>
               </label>
             </div>
             <div className="form-check text-right">
@@ -85,7 +85,7 @@ const Blogs = () => {
                 style={{ display: 'none' }}
               />
               <label className="form-check-label cursor-pointer" style={{ cursor: 'pointer' }} htmlFor="listView">
-                <i className="fa-solid fa-bars fa-2xl" style={{color:selectedOption==='list' && 'blue'}}></i>
+                <i className="fa-solid fa-bars fa-2xl" style={{ color: selectedOption === 'list' && 'var(--primary-color)' }}></i>
               </label>
             </div>
           </div>
