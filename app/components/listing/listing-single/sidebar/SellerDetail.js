@@ -15,7 +15,7 @@ const SellerDetail = () => {
 
       <div className="flex-grow-1 ms-3">
         <h5 className="mt0 mb5 fz16 heading-color fw600">
-          Volvo Cars Istanbul
+          Volvo Cars Istanbu
         </h5>
         <p className="mb0 tdu">
           <span className="flaticon-phone-call pr5 vam" />

@@ -9,7 +9,7 @@ const SellerDetail2 = () => {
             width={60}
             height={60}
             className="mr-3 author_img w60"
-            src="/images/team/seller.png"
+            src="/images/partners/3.png"
             alt="author.png"
           />
         </div>

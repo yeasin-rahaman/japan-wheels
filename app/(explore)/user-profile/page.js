@@ -69,7 +69,7 @@ const UserProfile = () => {
                     />
                   </div>
                   <div className="flex-grow-1 ms-3">
-                    <h2 className="mt-0 title">Volvo Cars Istanbul</h2>
+                    <h2 className="mt-0 title">Volvo Cars Istanbulll</h2>
                     <ul className="prop_details mb0">
                       <li className="list-inline-item">
                         <a className="mr10" href="#">

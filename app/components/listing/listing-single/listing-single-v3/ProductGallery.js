@@ -11,23 +11,23 @@ import Image from "next/image";
 
 const slides = [
   {
-    imageSrc: "/images/listing/lsp1-v1.jpg",
+    imageSrc: "/images/item/1.png",
     videoId: "VWrJkx6O0L8",
   },
   {
-    imageSrc: "/images/listing/lsp1-v2.jpg",
+    imageSrc: "/images/item/2.png",
     videoId: "TLEyLGWvjII",
   },
   {
-    imageSrc: "/images/listing/lsp1-v3.jpg",
+    imageSrc: "/images/item/3.png",
     videoId: "BS2jGGYC60c",
   },
   {
-    imageSrc: "/images/listing/lsp1-v4.jpg",
+    imageSrc: "/images/item/4.png",
     videoId: "8PiZNUCexrA",
   },
   {
-    imageSrc: "/images/listing/lsp1-v5.jpg",
+    imageSrc: "/images/item/5.png",
     videoId: "m4ZGuAbUMg8",
   },
 ];
