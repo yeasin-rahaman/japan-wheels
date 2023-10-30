@@ -27,7 +27,7 @@ const CarItems = () => {
                   height={183}
                   style={{
                     width: "100%",
-                    height: "100%",
+                    height: "10rem",
                     objectFit: "cover",
                   }}
                   priority
