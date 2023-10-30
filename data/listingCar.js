@@ -2,7 +2,7 @@ module.exports = [
   {
     id: 1,
     featured: true,
-    image: "/images/listing/1.jpg",
+    image: "/images/listing/1.avif",
     photosCount: 22,
     videosCount: 3,
     title: "Volvo XC90 - 2023",
@@ -17,7 +17,7 @@ module.exports = [
   {
     id: 2,
     featured: true,
-    image: "/images/listing/2.jpg",
+    image: "/images/listing/2.avif",
     photosCount: 33,
     videosCount: 4,
     title: "Mercedes-Benz S 560 - 2021",
@@ -32,7 +32,7 @@ module.exports = [
   {
     id: 3,
     featured: false,
-    image: "/images/listing/3.jpg",
+    image: "/images/listing/3.avif",
     photosCount: 55,
     videosCount: 3,
     title: "BMW M8 Gran Coupe Base - 2023",
@@ -47,7 +47,7 @@ module.exports = [
   {
     id: 4,
     featured: true,
-    image: "/images/listing/4.jpg",
+    image: "/images/listing/4.avif",
     photosCount: 12,
     videosCount: 3,
     title: "Nıssan Qasqai - Sky Pack",
@@ -62,7 +62,7 @@ module.exports = [
   {
     id: 5,
     featured: false,
-    image: "/images/listing/5.jpg",
+    image: "/images/listing/5.avif",
     photosCount: 22,
     videosCount: 3,
     title: "Audi A8 L 55 - 2021",
@@ -77,7 +77,7 @@ module.exports = [
   {
     id: 6,
     featured: false,
-    image: "/images/listing/6.jpg",
+    image: "/images/listing/6.avif",
     photosCount: 33,
     videosCount: 4,
     title: "Land Rover Range HSE Westminster",
@@ -92,7 +92,7 @@ module.exports = [
   {
     id: 7,
     featured: true,
-    image: "/images/listing/7.jpg",
+    image: "/images/listing/7.avif",
     photosCount: 55,
     videosCount: 3,
     title: "Bentley Bentayga V8 - 2023",
@@ -107,7 +107,7 @@ module.exports = [
   {
     id: 8,
     featured: true,
-    image: "/images/listing/8.jpg",
+    image: "/images/listing/8.avif",
     photosCount: 12,
     videosCount: 3,
     title: "Ferrari 488 Spider Base - 2019",
