@@ -30,7 +30,7 @@ export const getBlogs = (page) => (dispatch) => {
       Authorization: localStorage.getItem("jwt_access_token"),
     },
   };
-  fetch(`${GET_BLOGS}?page=${page || 1}&size=21`, authTOKEN)
+  fetch(`${GET_BLOGS}?page=${page || 1}&size=15`, authTOKEN)
     .then((res) => res.json())
     .then((data) => dispatch(setBlogs(data)))
     .catch((e) => {

@@ -97,8 +97,8 @@ const Home = () => {
         {/* End Our Popular Listing */}
 
         {/* Our Partners */}
-        <section className="our-partner pt80 pb80">
-          <div className="container">
+        <section className="our-partner pt80" style={{paddingBottom:'160px'}}>
+          <div className="container ">
             <div className="row">
               <div className="col-lg-6 offset-lg-3">
                 <div className="main-title text-center">

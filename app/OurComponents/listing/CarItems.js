@@ -68,7 +68,7 @@ const CarItems = () => {
               <div className="wrapper">
                 <h5 className="price">${listing.price}</h5>
                 <h6 className="title">
-                  <Link href={`car-details/${listing.id}`}>{listing.title}</Link>
+                  <Link href={`listings/${listing.id}`}>{listing.title}</Link>
                 </h6>
                 <div className="listign_review">
                   <ul className="mb0">
@@ -116,7 +116,7 @@ const CarItems = () => {
           <div className="new_line_pagination text-center">
             <p>Showing 36 of 497 Results</p>
             <div className="pagination_line" />
-            <a className="pagi_btn" href="#">
+            <a className="pagi_btn" href={`listings/1`}>
               Show More
             </a>
           </div>

@@ -26,20 +26,20 @@ const metadata = {
 const BlogDynamicSingle = () => {
   return (
     <div className="wrapper">
-      <div
+      {/* <div
         className="offcanvas offcanvas-end"
         tabIndex="-1"
         id="offcanvasRight"
         aria-labelledby="offcanvasRightLabel"
       >
         <HeaderSidebar />
-      </div>
+      </div> */}
       {/* Sidebar Panel End */}
 
       <AddBlog />
 
       {/* Our Footer */}
-      <Footer />
+      {/* <Footer /> */}
       {/* End Our Footer */}
 
       {/* End Modal */}

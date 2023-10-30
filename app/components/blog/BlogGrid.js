@@ -111,9 +111,9 @@ const BlogGrid = () => {
                     </ul>
                   </div>
                   <h4 className="title" style={{ minHeight: "80px" }}>
-                    <Link href={`/blog-details/${post?.id}`}>{post.title}</Link>
+                    <Link href={`/blogs/${post?.id}`}>{post.title}</Link>
                   </h4>
-                  <Link href={`/blog-details/${post?.id}`} className="more_listing">
+                  <Link href={`/blogs/${post?.id}`} className="more_listing">
                     Read More{" "}
                     <span className="icon">
                       <span className="fas fa-plus" />
