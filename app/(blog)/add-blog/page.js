@@ -9,13 +9,8 @@ const metadata = {
 
 const BlogDynamicSingle = () => {
 
-
-  // if (typeof window, Authorization !== 'undefined') {
-  //   const Authorization = localStorage.getItem("jwt_access_token");
-  //   const item = localStorage.getItem('key')
-  // }
-
-
+  const Authorization = localStorage.getItem("jwt_access_token");
+  console.log(Authorization);
   return (
     <div className="wrapper pb-80 pt-80">
       {
