@@ -40,6 +40,7 @@ function PurchaseFlow() {
           </div>
         </div>
         <Image
+          alt="test"
           width={35}
           height={35}
           className="arrow"
@@ -61,6 +62,7 @@ function PurchaseFlow() {
           </div>
           <div className="step-right">
             <Image
+              alt="test"
               width={60}
               height={40}
               src="/images/purchaseFlow/credit-card.svg"
@@ -69,6 +71,7 @@ function PurchaseFlow() {
           </div>
         </div>
         <Image
+          alt="test"
           width={35}
           height={35}
           className="arrow"
@@ -91,6 +94,7 @@ function PurchaseFlow() {
         </div>
 
         <Image
+          alt=""
           width={35}
           height={35}
           className="arrow"
