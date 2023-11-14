@@ -9,6 +9,8 @@ const HeaderTop = () => {
       link: "http://www.facebook.com/JapanWheelsWorldwide",
       color: 'blue'
     },
+
+
     {
       icon: "fab fa-tiktok fa-lg",
       link: "https://www.tiktok.com/@japanwheels.com?lang=en",
@@ -83,7 +85,7 @@ const HeaderTop = () => {
                       data-bs-toggle="modal"
                       data-bs-target="#logInModal"
                     >
-                      <i class="fa-solid fa-right-to-bracket fa-lg"></i>
+                      <i className="fa-solid fa-right-to-bracket fa-lg"></i>
                     </a>
                   )}
                 </li>
@@ -96,7 +98,7 @@ const HeaderTop = () => {
                       data-bs-toggle="modal"
                       data-bs-target="#logInModal"
                     >
-                      <i class="fa-solid fa-user-plus fa-lg"></i>
+                      <i className="fa-solid fa-user-plus fa-lg"></i>
                     </a>
                   </li>
                 )}
