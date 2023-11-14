@@ -43,7 +43,7 @@ function PurchaseFlow() {
           width={35}
           height={35}
           className="arrow"
-          src="{}"
+          src="/images/purchaseFlow/right-angle.svg"
         />
         <div className="step1">
           <div className="step-left">
@@ -63,7 +63,7 @@ function PurchaseFlow() {
             <Image
               width={60}
               height={40}
-              src={"/images/purchaseFlow/.svg"}
+              src="/images/purchaseFlow/credit-card.svg"
             />
             <div className="sentence-zone">Pay via your preferred method</div>
           </div>
