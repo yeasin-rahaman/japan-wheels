@@ -138,8 +138,8 @@ const AddBlog = () => {
             <div className="form-group">
               <div className="image-preview">
                 <Image
-                  width={auto}
-                  height={auto}
+                  width={100}
+                  height={100}
                   src={previewImage}
                   alt="Image Preview"
                   style={{ maxWidth: "300px", maxHeight: "300px" }}

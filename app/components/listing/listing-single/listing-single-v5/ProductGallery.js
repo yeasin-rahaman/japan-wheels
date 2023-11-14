@@ -46,8 +46,8 @@ const ProductGallery = () => {
                     <div className="thumb">
                       <div className="tags">FEATURED</div>
                       <Image
-                        width={auto}
-                        height={auto}
+                        width={100}
+                        height={100}
                         className="img-fluid"
                         src="/images/listing/lsp5-v2.jpg"
                         alt="lsp5-v2.jpg"
