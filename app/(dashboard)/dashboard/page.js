@@ -16,27 +16,8 @@ export const metadata = {
 const Dashboard = () => {
   return (
     <div className="wrapper">
-      <div
-        className="offcanvas offcanvas-end"
-        tabIndex="-1"
-        id="offcanvasRight"
-        aria-labelledby="offcanvasRightLabel"
-      >
-        <HeaderSidebar />
-      </div>
-      {/* Sidebar Panel End */}
 
-      {/* header top */}
-      <DashboardHeaderTop />
-      {/* End header top */}
-
-      {/* Main Header Nav */}
-      <DashboardHeader />
-      {/* End Main Header Nav */}
-
-      {/* Main Header Nav For Mobile */}
-      <MobileMenu />
-      {/* End Main Header Nav For Mobile */}
+      
 
       {/* Our Dashbord */}
       <section className="our-dashbord dashbord bgc-f9">
@@ -98,17 +79,7 @@ const Dashboard = () => {
       </section>
       {/* End Our Dashbord */}
 
-      {/* Modal */}
-      <div
-        className="sign_up_modal modal fade"
-        id="logInModal"
-        data-backdrop="static"
-        data-keyboard=""
-        tabIndex={-1}
-        aria-hidden="true"
-      >
-        <LoginSignupModal />
-      </div>
+
       {/* End Modal */}
     </div>
     // End wrapper

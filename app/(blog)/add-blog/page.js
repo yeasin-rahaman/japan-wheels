@@ -17,6 +17,7 @@ import Pagination from "@/app/components/blog/blog-single/Pagination";
 import Comments from "@/app/components/blog/blog-single/Comments";
 import CommentForm from "@/app/components/blog/blog-single/CommentForm";
 import AddBlog from "./AddBlog";
+import PageNotFound from "@/utils/PageNotFound";
 
 const metadata = {
   title:
@@ -24,25 +25,16 @@ const metadata = {
 };
 
 const BlogDynamicSingle = () => {
+  const Authorization= localStorage.getItem("jwt_access_token");
+
   return (
-    <div className="wrapper">
-      {/* <div
-        className="offcanvas offcanvas-end"
-        tabIndex="-1"
-        id="offcanvasRight"
-        aria-labelledby="offcanvasRightLabel"
-      >
-        <HeaderSidebar />
-      </div> */}
-      {/* Sidebar Panel End */}
+    <div className="wrapper pb-80 pt-80">
+    {
+      Authorization ?  <AddBlog /> : <PageNotFound/>
+    }
 
-      <AddBlog />
 
-      {/* Our Footer */}
-      {/* <Footer /> */}
-      {/* End Our Footer */}
-
-      {/* End Modal */}
+    
     </div>
     // End wrapper
   );

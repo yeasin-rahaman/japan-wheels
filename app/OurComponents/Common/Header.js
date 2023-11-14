@@ -77,6 +77,11 @@ const Header = () => {
                 />
                 <ul className="sub-menu">
                   <li className="dropitem ">
+                    <Link href="/dashboard" className="active ">
+                      <span className="text-dark">Dashboard</span>
+                    </Link>
+                  </li>
+                  <li className="dropitem ">
                     <Link href="#" className="active ">
                       <span className="text-dark">Profile</span>
                     </Link>

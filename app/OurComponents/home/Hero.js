@@ -14,18 +14,15 @@ const Hero = () => {
   const carSlides = [
     {
       image: "/images/home/6.jpg",
-      title: "BMW M8 Gran Coupe Base",
-      price: "$746",
+    
     },
     {
       image: "/images/home/2.jpg",
-      title: "BMW M8 Gran Audi A8 L 55",
-      price: "$865",
+
     },
     {
       image: "/images/home/1.jpg",
-      title: "BMW M8 Gran Coupe",
-      price: "$976",
+   
     },
   ];
   const dispatch = useDispatch();
@@ -62,12 +59,20 @@ console.log(`siteSetting`,siteSetting)
                     <div className="container home_fixed_content">
                       <div className="row">
                         <div className="col-lg-7 col-xl-8">
-                          <div className="home-content-home6-style">
+                          <div >
                             <div className="home_content">
                               <h2 className="banner-title">
-                                <small>2023</small> <br /> {slide.title}
+                                <small>       <Image
+                                  width={750}
+                                  height={250}
+                                   
+                                    
+                                    className="objects"
+                                    src="/images/logo.svg"
+                                    alt="border image"
+                                  /></small> <br /> We Delivered Dreams
                               </h2>
-                              <h3 className="banner_top_title text-thm d-flex align-items-baseline">
+                              {/* <h3 className="banner_top_title text-thm d-flex align-items-baseline">
                                 <span className="aminated-object1">
                                   <Image
                                     width={110}
@@ -85,7 +90,7 @@ console.log(`siteSetting`,siteSetting)
                                 <small className="text-white d-inline-block ms-2">
                                   / Month
                                 </small>
-                              </h3>
+                              </h3> */}
                               {/* <Link
                                 href="/listing-single-v1"
                                 className="btn banner-btn"

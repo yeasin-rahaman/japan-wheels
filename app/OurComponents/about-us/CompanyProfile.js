@@ -53,8 +53,8 @@ const CompanyProfile = () => {
                   textAlign: "center",
                 }}
               >
-                <h5 class="title">Mission Statement</h5>
-                <p class="card-text" style={{ textAlign: "justify" }}>
+                <h5 className="title">Mission Statement</h5>
+                <p className="card-text" style={{ textAlign: "justify" }}>
                   Our mission is to connect the world through wheels, providing
                   tailored solutions for every unique customer while ensuring
                   the highest standards of quality and service
@@ -68,8 +68,8 @@ const CompanyProfile = () => {
                   textAlign: "center",
                 }}
               >
-                <h5 class="title">Vision Statement</h5>
-                <p class="card-text" style={{ textAlign: "justify" }}>
+                <h5 className="title">Vision Statement</h5>
+                <p className="card-text" style={{ textAlign: "justify" }}>
                   We envision a world where Japan Wheels not only fuels
                   transportation but also fuels positive change, making a
                   lasting impact on communities, customers, and the automotive
@@ -84,8 +84,8 @@ const CompanyProfile = () => {
                   textAlign: "center",
                 }}
               >
-                <h5 class="title">Company Values</h5>
-                <p class="card-text" style={{ textAlign: "justify" }}>
+                <h5 className="title">Company Values</h5>
+                <p className="card-text" style={{ textAlign: "justify" }}>
                   Japan Wheels LLC emphasizes diversity, innovative leadership,
                   global unity, customer-centricity, integrity, and
                   environmental responsibility, while excelling in logistics and

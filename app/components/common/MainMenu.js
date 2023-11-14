@@ -6,10 +6,17 @@ import { usePathname } from "next/navigation";
 
 const MainMenu = () => {
     const path = usePathname();
-
+    const links = [
+        { label: "Home", path: "/" },
+        { label: "About Us", path: "/about-us" },
+        { label: "Listings", path: "/listings" },
+        { label: "Blogs", path: "/blogs" },
+        { label: "User", path: "/user-profile" },
+        { label: "Service", path: "/service" },
+      ];
     return (
         <>
-            {menuItems.map((menuItem, index) => (
+            {/* {menuItems.map((menuItem, index) => (
                 <li className="dropitem" key={index}>
                     <a
                         className={
@@ -23,7 +30,7 @@ const MainMenu = () => {
                         <span className="arrow"></span>
                     </a>
                     <ul className="sub-menu">
-                        {menuItem.subMenu.map((subItem, subIndex) => (
+                        {menuItem?.subMenu.map((subItem, subIndex) => (
                             <li key={subIndex} className="dropitem">
                                 {subItem.subMenu ? (
                                     <>
@@ -84,7 +91,12 @@ const MainMenu = () => {
                         ))}
                     </ul>
                 </li>
-            ))}
+            ))} */}
+            {links.map((link, index) => (
+        <li className="list-inline-item" key={index}>
+          <Link href={link.path}>{link.label}</Link>
+        </li>
+      ))}
         </>
     );
 };

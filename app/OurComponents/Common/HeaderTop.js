@@ -5,20 +5,24 @@ import { useDispatch, useSelector } from "react-redux";
 const HeaderTop = () => {
   const socialData = [
     {
-      icon: "fab fa-facebook-f",
+      icon: "fa-brands fa-facebook fa-lg",
       link: "http://www.facebook.com/JapanWheelsWorldwide",
+      color: 'blue'
     },
     {
-      icon: "fab fa-tiktok",
+      icon: "fab fa-tiktok fa-lg",
       link: "https://www.tiktok.com/@japanwheels.com?lang=en",
+      color: 'black'
     },
     {
-      icon: "fab fa-instagram",
+      icon: "fab fa-instagram fa-lg",
       link: "https://www.instagram.com/japanwheels_worldwide/",
+      color: '#F56040'
     },
     {
-      icon: "fab fa-linkedin",
+      icon: "fab fa-linkedin fa-lg",
       link: "https://www.linkedin.com/in/mustafa-khan-303266265/",
+      color: 'blue'
     },
   ];
 
@@ -33,11 +37,7 @@ const HeaderTop = () => {
       text: "mustafa@japanwheels.com",
       href: "mailto:mustafa@japanwheels.com",
     },
-    {
-      icon: "flaticon-map",
-      text: "116-002 Arakawa-Ku, Arakawa 3-6-4 Tokyo, Japan",
-      href: "",
-    },
+
   ];
   const dispatch = useDispatch();
   const user = useSelector((state) => state.japanwheels?.userInfo);
@@ -70,7 +70,7 @@ const HeaderTop = () => {
                 {socialData.map((social, index) => (
                   <li className="list-inline-item" key={index}>
                     <a href={social.link}>
-                      <span className={social.icon} />
+                      <span className={social.icon} style={{ color: social.color }} />
                     </a>
                   </li>
                 ))}
@@ -83,7 +83,7 @@ const HeaderTop = () => {
                       data-bs-toggle="modal"
                       data-bs-target="#logInModal"
                     >
-                      Login
+                      <i class="fa-solid fa-right-to-bracket fa-lg"></i>
                     </a>
                   )}
                 </li>
@@ -96,7 +96,7 @@ const HeaderTop = () => {
                       data-bs-toggle="modal"
                       data-bs-target="#logInModal"
                     >
-                      Register
+                      <i class="fa-solid fa-user-plus fa-lg"></i>
                     </a>
                   </li>
                 )}

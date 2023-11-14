@@ -49,13 +49,13 @@ const CompanyProfile = () => {
               <div
                 className="col-md-3 p-5"
                 style={{
-                  border: "1px solid gray",
+                  border: "1px solid gclassName=ray",
                   margin: "10px",
                   textAlign: "center",
                 }}
               >
-                <h5 class="title">Mission Statement</h5>
-                <p class="card-text" style={{ paddingTop: "7px" }}>
+                <h5 className="title">Mission Statement</h5>
+                <p className="card-text" style={{ paddingTop: "7px" }}>
                   <strong>
                     Every customer is unique, we fulfill their needs by offering
                     them our tailor-made solutions.
@@ -70,8 +70,8 @@ const CompanyProfile = () => {
                   textAlign: "center",
                 }}
               >
-                <h5 class="title">Vision Statement</h5>
-                <p class="card-text" style={{ paddingTop: "7px" }}>
+                <h5 className="title">Vision Statement</h5>
+                <p className="card-text" style={{ paddingTop: "7px" }}>
                   <strong>
                     Leading the Way, Inspiring Adventures, Transforming the
                     World on Wheels.
@@ -86,8 +86,8 @@ const CompanyProfile = () => {
                   textAlign: "center",
                 }}
               >
-                <h5 class="title">Company Values</h5>
-                <p class="card-text" style={{ paddingTop: "7px" }}>
+                <h5 className="title">Company Values</h5>
+                <p className="card-text" style={{ paddingTop: "7px" }}>
                   <p>
                     We are passionate about{" "}
                     <em>

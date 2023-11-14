@@ -14,27 +14,7 @@ export const metadata = {
 const MyListing = () => {
   return (
     <div className="wrapper">
-      <div
-        className="offcanvas offcanvas-end"
-        tabIndex="-1"
-        id="offcanvasRight"
-        aria-labelledby="offcanvasRightLabel"
-      >
-        <HeaderSidebar />
-      </div>
-      {/* Sidebar Panel End */}
-
-      {/* header top */}
-      <DashboardHeaderTop />
-      {/* End header top */}
-
-      {/* Main Header Nav */}
-      <DashboardHeader />
-      {/* End Main Header Nav */}
-
-      {/* Main Header Nav For Mobile */}
-      <MobileMenu />
-      {/* End Main Header Nav For Mobile */}
+  
 
       {/* Our Dashbord */}
       <section className="our-dashbord dashbord bgc-f9">
