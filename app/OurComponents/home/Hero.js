@@ -14,7 +14,7 @@ const Hero = () => {
   const carSlides = [
     {
       image: "/images/home/6.jpg",
-    
+
     },
     {
       image: "/images/home/2.jpg",
@@ -22,16 +22,16 @@ const Hero = () => {
     },
     {
       image: "/images/home/1.jpg",
-   
+
     },
   ];
   const dispatch = useDispatch();
   //for sitesetting
   useEffect(() => {
     dispatch(getSiteSetting());
-  }, []);
-    const siteSetting = useSelector((state) => state.japanwheels?.siteSetting[0]);
-console.log(`siteSetting`,siteSetting)
+  }, [dispatch]);
+  const siteSetting = useSelector((state) => state.japanwheels?.siteSetting[0]);
+  console.log(`siteSetting`, siteSetting)
   return (
     <div className="home-one home-six mt70-992 ovh pt0-sm">
       <div className="container-fluid p0">
@@ -65,12 +65,12 @@ console.log(`siteSetting`,siteSetting)
                                 <small>       <Image
                                   width={750}
                                   height={250}
-                                   
-                                    
-                                    className="objects"
-                                    src="/images/logo.svg"
-                                    alt="border image"
-                                  /></small> <br /> We Delivered Dreams
+
+
+                                  className="objects"
+                                  src="/images/logo.svg"
+                                  alt="border image"
+                                /></small> <br /> We Delivered Dreams
                               </h2>
                               {/* <h3 className="banner_top_title text-thm d-flex align-items-baseline">
                                 <span className="aminated-object1">

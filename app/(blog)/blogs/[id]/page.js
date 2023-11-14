@@ -19,7 +19,7 @@ const BlogDynamicSingle = () => {
   const id = 1;
   useEffect(() => {
     dispatch(getBlog(id));
-  }, [id]);
+  }, [dispatch, id]);
   console.log(`blog`, blog);
   return (
     <div className="wrapper">
@@ -92,7 +92,7 @@ const BlogDynamicSingle = () => {
                     allowAttributes
                     allowElements
                     disableLineBreaks={true}
-                    style={{textAlign: 'justify'}}
+                    style={{ textAlign: 'justify' }}
                     content={blog?.description}
                   />
 

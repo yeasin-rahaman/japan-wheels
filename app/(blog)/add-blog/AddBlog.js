@@ -8,6 +8,7 @@ import post from "@/utils/post";
 import { useRouter } from "next/navigation";
 
 import Swal from "sweetalert2";
+import Image from "next/image";
 
 const AddBlog = () => {
   const router = useRouter();
@@ -31,7 +32,7 @@ const AddBlog = () => {
     reader.readAsDataURL(selectedImage);
   };
   const editorRef = useRef(null);
-  const isFormValid = image && title ;
+  const isFormValid = image && title;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,7 +43,7 @@ const AddBlog = () => {
       formData.append("image", image);
     }
     post(CREATE_BLOG, formData).then((res) => {
-      console.log(`res`,res)
+      console.log(`res`, res)
       if (res?.status === 200) {
         setTitle('');
         setImage(null);
@@ -135,7 +136,7 @@ const AddBlog = () => {
           <div className="col-md-12">
             <div className="form-group">
               <div className="image-preview">
-                <img
+                <Image
                   src={previewImage}
                   alt="Image Preview"
                   style={{ maxWidth: "300px", maxHeight: "300px" }}
