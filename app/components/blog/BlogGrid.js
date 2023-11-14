@@ -54,7 +54,7 @@ const BlogGrid = () => {
     } else {
       pages.push(
         <li
-          role="button"
+          // role="button"
           key={page}
           className={`page-item ${page === currentPage ? "active" : ""}`}
           onClick={() => handleClick(page)}
@@ -133,7 +133,7 @@ const BlogGrid = () => {
               {/* <li role="button" className="page-item" onClick={handleFirst}>
                 <span className="page-link">First</span>
               </li> */}
-              <li role="button" className="page-item" onClick={handlePrevious}>
+              <li className="page-item" onClick={handlePrevious}>
                 <span className="fa fa-arrow-left" />
               </li>
               {pages}

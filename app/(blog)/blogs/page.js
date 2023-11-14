@@ -1,16 +1,9 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import { Provider, useDispatch, useSelector } from "react-redux";
 import { store } from "@/app/Redux/store";
-import DefaultHeader from "../../components/common/DefaultHeader";
-import HeaderSidebar from "../../components/common/HeaderSidebar";
-import HeaderTop from "../../components/common/HeaderTop";
-import MobileMenu from "../../components/common/MobileMenu";
-import LoginSignupModal from "@/app/components/common/login-signup";
 import BlogGrid from "@/app/components/blog/BlogGrid";
 import BlogList from "@/app/components/blog/BlogList";
-import SearchWidget from "@/app/components/blog/sidebar-components/SearchWidget";
 
 const Blogs = () => {
   const [selectedOption, setSelectedOption] = useState("grid");

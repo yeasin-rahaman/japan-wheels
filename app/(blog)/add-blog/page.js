@@ -10,10 +10,10 @@ const metadata = {
 const BlogDynamicSingle = () => {
 
 
-  if (typeof window !== 'undefined') {
-    const Authorization = localStorage.getItem("jwt_access_token");
-    const item = localStorage.getItem('key')
-  }
+  // if (typeof window, Authorization !== 'undefined') {
+  //   const Authorization = localStorage.getItem("jwt_access_token");
+  //   const item = localStorage.getItem('key')
+  // }
 
 
   return (
