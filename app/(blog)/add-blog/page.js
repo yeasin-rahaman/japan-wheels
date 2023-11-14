@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import AddBlog from "./AddBlog";
 import PageNotFound from "@/utils/PageNotFound";
 
@@ -8,16 +9,15 @@ const metadata = {
 };
 
 const BlogDynamicSingle = () => {
+  // const Authorization = localStorage.getItem("jwt_access_token");
 
-  const Authorization = localStorage.getItem("jwt_access_token");
-  console.log(Authorization);
   return (
     <div className="wrapper pb-80 pt-80">
-      {
+      {/* {
         Authorization ? <AddBlog /> : <PageNotFound />
-      }
+      } */}
 
-
+      <AddBlog />
 
     </div>
     // End wrapper
