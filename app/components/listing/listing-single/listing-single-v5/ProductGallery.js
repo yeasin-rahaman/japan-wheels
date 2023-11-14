@@ -5,6 +5,7 @@ import "react-modal-video/scss/modal-video.scss";
 import "photoswipe/dist/photoswipe.css";
 import Image from "next/image";
 import { useState } from "react";
+import { auto } from "@popperjs/core";
 
 const ProductGallery = () => {
   const images = [
@@ -44,7 +45,9 @@ const ProductGallery = () => {
                   <div className="single_item">
                     <div className="thumb">
                       <div className="tags">FEATURED</div>
-                      <img
+                      <Image
+                        width={auto}
+                        height={auto}
                         className="img-fluid"
                         src="/images/listing/lsp5-v2.jpg"
                         alt="lsp5-v2.jpg"

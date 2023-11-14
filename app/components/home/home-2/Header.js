@@ -1,7 +1,7 @@
 import Link from "next/link";
 import MainMenu from "../../common/MainMenu";
 import Image from "next/image";
-
+import logo from './../../../../public/images/logo.svg'
 const Header = () => {
   return (
     <header className="header-nav menu_style_home_one home2_style main-menu">
@@ -21,14 +21,14 @@ const Header = () => {
               width={140}
               height={50}
               className="logo1 img-fluid"
-              src="/images/logo.svg"
+              src={logo}
               alt="header-logo.svg"
             />
             <Image
               width={140}
               height={50}
               className="logo2 img-fluid"
-              src="/images/logo.svg"
+              src={logo}
               alt="header-logo2.svg"
             />
           </Link>

@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 
 import Swal from "sweetalert2";
 import Image from "next/image";
+import { auto } from "@popperjs/core";
 
 const AddBlog = () => {
   const router = useRouter();
@@ -137,6 +138,8 @@ const AddBlog = () => {
             <div className="form-group">
               <div className="image-preview">
                 <Image
+                  width={auto}
+                  height={auto}
                   src={previewImage}
                   alt="Image Preview"
                   style={{ maxWidth: "300px", maxHeight: "300px" }}
