@@ -1,7 +1,7 @@
 "use client";
-import { useState } from "react";
 import AddBlog from "./AddBlog";
 import PageNotFound from "@/utils/PageNotFound";
+import { useSelector } from "react-redux";
 
 const metadata = {
   title:
@@ -11,13 +11,17 @@ const metadata = {
 const BlogDynamicSingle = () => {
   // const Authorization = localStorage.getItem("jwt_access_token");
 
+  const user = useSelector((state) => state.japanwheels?.userInfo);
   return (
     <div className="wrapper pb-80 pt-80">
       {/* {
         Authorization ? <AddBlog /> : <PageNotFound />
       } */}
 
-      <AddBlog />
+      {
+        user.id ? <AddBlog /> : <PageNotFound />
+      }
+
 
     </div>
     // End wrapper
