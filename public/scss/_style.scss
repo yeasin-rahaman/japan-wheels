@@ -3247,7 +3247,8 @@ span.aminated-object1 .objects {
 }
 
 .advance_search_panel .nav-pills .nav-link {
-  background-color: var(--primary-color);
+
+  background-color: #fff;
   border-radius: 8px 8px 0px 0px;
   color: #1a3760;
   font-size: 13px;
@@ -3262,7 +3263,7 @@ span.aminated-object1 .objects {
 
 .advance_search_panel .nav-pills .nav-link.active,
 .advance_search_panel .nav-pills .show>.nav-link {
-  background-color: #fff;
+  background-color: var(--primary-color);
   border-color: #ddd;
 }
 
@@ -27958,6 +27959,6 @@ input.quantity-num[type="number"]::-webkit-outer-spin-button {
   box-shadow: 0 10px 6px -6px #777;
 }
 
-.tox-statusbar__branding{
-  display:none !important;
+.tox-statusbar__branding {
+  display: none !important;
 }
