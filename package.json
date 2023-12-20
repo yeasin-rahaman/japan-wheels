@@ -19,6 +19,7 @@
     "chart.js": "^4.3.0",
     "eslint": "8.41.0",
     "eslint-config-next": "^13.5.4",
+    "force": "^0.0.3",
     "interweave": "^13.1.0",
     "moment": "^2.29.4",
     "next": "^13.5.4",
@@ -39,7 +40,7 @@
     "sass": "^1.62.1",
     "sharp": "^0.32.6",
     "styled-components": "^6.0.0-rc.1",
-    "sweetalert2": "^11.7.32",
+    "sweetalert2": "^11.6.13",
     "swiper": "^9.2.4"
   },
   "devDependencies": {
