@@ -4,13 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from 'react';
 const CarItems = () => {
-  const [data, setData] = useState([]);
+
   useEffect(() => {
-    fetch('http://78.46.90.228/api/?json&code=JWLgF5h4kLs3&sql=select%20*%20from%20main%20limit%2010')
-      .then(res => res.json())
-      .then(data => setData(data))
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+
+    fetch("http://78.46.90.228/api/?json&code=JWLgF5h4kLs3&sql=select%20*%20from%20main%20limit%2010", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
   }, [])
-  console.log("blogs", data);
+
   return (
     <>
 
