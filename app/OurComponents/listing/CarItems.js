@@ -9,7 +9,7 @@ const CarItems = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://api.japanwheels.com/api/vehicles?count=10');
+        const response = await fetch('https://api.japanwheels.com/api/vehicles');
         const data = await response.json();
         setListingCars(data);
       } catch (error) {
@@ -19,14 +19,15 @@ const CarItems = () => {
 
     fetchData();
   }, []); // The empty dependency array ensures this effect runs only once on component mount
-
+  console.log(listingCars.length);
 
   return (
     <>
 
 
       {
-        listingCars.slice(0, 9).map((listing) => (
+        // listingCars.slice(0, 9).map((listing) => (
+        listingCars.map((listing) => (
           <div className="col-sm-6 col-xl-4" key={listing.ID}>
             <Link href={`listings/${listing.ID}`}>
               <div className="car-listing">
