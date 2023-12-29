@@ -57,7 +57,7 @@ const CarItems = () => {
                       objectFit: "cover",
                     }}
                     priority
-                    src={listing.IMAGES.split('#')[0]}  // Use only the first image URL
+                    src={listing.IMAGES.split('#')[0].replace(/&h=50/, '&w=320')}  // Use only the first image URL
                     alt={""}
                   />
 
