@@ -6,7 +6,7 @@ import MobileMenu from "@/app/components/common/MobileMenu";
 import LoginSignupModal from "@/app/components/common/login-signup";
 import BreadCrumb from "@/app/components/listing/listing-single/BreadCrumb";
 import ShareMeta from "../../../components/listing/listing-single/ShareMeta";
-import ProductGallery from "@/app/components/listing/listing-single/listing-single-v3/ProductGallery";
+import ProductGallery from "@/app/OurComponents/listing/ProductGallery";
 import Overview from "@/app/components/listing/listing-single/Overview";
 import Descriptions from "@/app/components/listing/listing-single/Descriptions";
 import Features from "@/app/components/listing/listing-single/Features";

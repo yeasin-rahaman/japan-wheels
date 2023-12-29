@@ -1,25 +1,7 @@
-"use client"
-import listingCar from "@/data/listingCar";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from 'react';
-const CarItems = () => {
-  const [listingCars, setListingCars] = useState([]);
+const CarItems = ({ listingCars }) => {
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://api.japanwheels.com/api/vehicles');
-        const data = await response.json();
-        setListingCars(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []); // The empty dependency array ensures this effect runs only once on component mount
-  console.log(listingCars.length);
 
   return (
     <>

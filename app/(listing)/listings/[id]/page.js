@@ -1,5 +1,6 @@
+"use client"
 import BreadCrumb from "@/app/components/listing/listing-single/BreadCrumb";
-import ProductGallery from "@/app/components/listing/listing-single/listing-single-v3/ProductGallery";
+import ProductGallery from "@/app/OurComponents/listing/ProductGallery";
 import Overview from "@/app/components/listing/listing-single/Overview";
 import Descriptions from "@/app/components/listing/listing-single/Descriptions";
 import Features from "@/app/components/listing/listing-single/Features";
@@ -7,17 +8,37 @@ import Link from "next/link";
 import SellerDetail2 from "@/app/components/listing/listing-single/sidebar/SellerDetail2";
 import Map from "@/app/components/common/Map";
 import ShareMeta from "@/app/components/listing/listing-single/ShareMeta";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
-export const metadata = {
-  title:
-    "Listing Single V3 || Voiture - Automotive & Car Dealer NextJS Template",
-};
+
+
 
 const ListingSingleV3 = () => {
+  const { id } = useParams({});
+
+  const [details, setDetails] = useState([]);
+  console.log(id);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`https://api.japanwheels.com/api/vehicle-detail?id=${id}`);
+        const data = await response.json();
+        setDetails(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, [id]); // The empty dependency array ensures this effect runs only once on 
+
+
   return (
     <div className="wrapper">
-  
-    
+
+
 
       {/* Agent Single Grid View */}
       <section className="our-agent-single bgc-f9 pb90 mt70-992 pt30">
@@ -51,7 +72,7 @@ const ListingSingleV3 = () => {
                       </a>
                     </li>
                   </ul>
-                  <h2 className="title">Volvo XC 90</h2>
+                  <h2 className="title">{details.MODEL_NAME}</h2>
                   <p className="para">
                     2.0h T8 11.6kWh Polestar Engineered Auto AWD (s/s) 5dr
                   </p>
@@ -83,7 +104,9 @@ const ListingSingleV3 = () => {
 
           <div className="row">
             <div className="col-xl-6 mb30">
-              <ProductGallery />
+              <ProductGallery
+                IMAGES={details.IMAGES}
+              />
               {/* End Car Gallery */}
             </div>
             {/* End .col-xl-6 */}
@@ -134,7 +157,7 @@ const ListingSingleV3 = () => {
                   </div>
                 </div>
               </div>
-           
+
             </div>
             {/* End .col-xl-6 */}
 
@@ -148,8 +171,8 @@ const ListingSingleV3 = () => {
               </div>
               {/* End car descriptions */}
 
-          
-           
+
+
             </div>
           </div>
           {/* End .row */}

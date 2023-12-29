@@ -32,7 +32,9 @@ const slides = [
   },
 ];
 
-export default function ProductGallery() {
+export default function ProductGallery({ IMAGES }) {
+
+  console.log(IMAGES);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [isOpen, setOpen] = useState(false);
   const [videoId, setVideoId] = useState("");

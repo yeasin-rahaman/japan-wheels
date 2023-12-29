@@ -1,5 +1,5 @@
 import BreadCrumb from "@/app/components/listing/listing-single/BreadCrumb";
-import ProductGallery from "@/app/components/listing/listing-single/listing-single-v3/ProductGallery";
+import ProductGallery from "@/app/OurComponents/listing/ProductGallery";
 import Overview from "@/app/components/listing/listing-single/Overview";
 import Descriptions from "@/app/components/listing/listing-single/Descriptions";
 import Features from "@/app/components/listing/listing-single/Features";
@@ -16,8 +16,8 @@ export const metadata = {
 const ListingSingleV3 = () => {
   return (
     <div className="wrapper">
-  
-    
+
+
 
       {/* Agent Single Grid View */}
       <section className="our-agent-single bgc-f9 pb90 mt70-992 pt30">
@@ -134,7 +134,7 @@ const ListingSingleV3 = () => {
                   </div>
                 </div>
               </div>
-           
+
             </div>
             {/* End .col-xl-6 */}
 
@@ -148,8 +148,8 @@ const ListingSingleV3 = () => {
               </div>
               {/* End car descriptions */}
 
-          
-           
+
+
             </div>
           </div>
           {/* End .row */}

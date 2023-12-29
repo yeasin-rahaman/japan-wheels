@@ -1,12 +1,31 @@
+"use client"
 import CarItems from "@/app/OurComponents/listing/CarItems";
 import SidebarAdvnaceFilter from "@/app/OurComponents/listing/SidebarAdvanceFilter";
 import ListGridFilter2 from "@/app/OurComponents/listing/ListGridFilter2";
+import { useEffect, useState } from "react";
 
-export const metadata = {
-  title: "Japan Wheels",
-};
+
+
 
 const ListingV3 = () => {
+
+
+  const [listingCars, setListingCars] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://api.japanwheels.com/api/vehicles');
+        const data = await response.json();
+        setListingCars(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []); // The empty dependency array ensures this effect runs only once on component mount
+  console.log(listingCars.length);
   return (
     <div className="wrapper">
       {/* Inner Page Breadcrumb */}
@@ -42,10 +61,14 @@ const ListingV3 = () => {
             {/* End .col-lg-4 */}
 
             <div className="col-lg-8 col-xl-9">
-              <ListGridFilter2 />
+              <ListGridFilter2
+                listingCars={listingCars.length}
+              />
 
               <div className="row">
-                <CarItems />
+                <CarItems
+                  listingCars={listingCars}
+                />
               </div>
               {/* End .row */}
             </div>
