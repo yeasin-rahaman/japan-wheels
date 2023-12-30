@@ -5,12 +5,6 @@ import React, { useEffect, useState } from 'react';
 
 const Auction = () => {
 
-    function MyComponent() {
-        const [state, setState] = useState(initialState);
-        // ...
-    }
-
-
 
     const [listingCars, setListingCars] = useState([]);
     const listName = "Auctions"
