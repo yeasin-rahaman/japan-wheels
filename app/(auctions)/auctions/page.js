@@ -3,7 +3,15 @@
 import Listings from '@/app/OurComponents/listings/Listings';
 import React, { useEffect, useState } from 'react';
 
-const page = () => {
+const Auction = () => {
+
+    function MyComponent() {
+        const [state, setState] = useState(initialState);
+        // ...
+    }
+
+
+
     const [listingCars, setListingCars] = useState([]);
     const listName = "Auctions"
     useEffect(() => {
@@ -30,4 +38,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Auction;

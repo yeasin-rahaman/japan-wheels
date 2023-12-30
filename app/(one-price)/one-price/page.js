@@ -3,7 +3,7 @@
 import Listings from '@/app/OurComponents/listings/Listings';
 import React, { useEffect, useState } from 'react';
 
-const page = () => {
+const OnePrice = () => {
     const [listingCars, setListingCars] = useState([]);
     const listName = "One Price"
     useEffect(() => {
@@ -30,4 +30,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default OnePrice;
