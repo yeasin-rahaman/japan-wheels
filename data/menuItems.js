@@ -1,6 +1,6 @@
 module.exports = [
   {
-    label: "Home",path: "/",
+    label: "Home", path: "/",
     subMenu: [
       // { label: "Home", path: "/" },
       // { label: "Home v2", path: "/home-2" },
@@ -12,7 +12,7 @@ module.exports = [
     ],
   },
   {
-    label: "Listings",path: "/sdms",
+    label: "Listings", path: "/sdms",
     subMenu: [
       // {
       //   label: "Listing Styles",

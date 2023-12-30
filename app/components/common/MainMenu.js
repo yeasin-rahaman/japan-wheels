@@ -10,9 +10,10 @@ const MainMenu = () => {
         { label: "Home", path: "/" },
 
         { label: "Listings", path: "/listings" },
+        { label: "One Price", path: "/one-price" },
         { label: "About Us", path: "/about-us" },
         { label: "Blogs", path: "/blogs" },
-        { label: "User", path: "/user-profile" },
+
         { label: "Service", path: "/service" },
     ];
     return (

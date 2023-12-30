@@ -62,7 +62,7 @@ export default function ProductGallery({ IMAGES }) {
             modules={[FreeMode, Navigation, Thumbs]}
             className="mySwiper2 sps_content single_product_grid user_profile "
           >
-            {slides.map((slide, index) => (
+            {/* {slides.map((slide, index) => (
               <SwiperSlide key={index}>
                 <div className="item">
                   <Image
@@ -86,7 +86,31 @@ export default function ProductGallery({ IMAGES }) {
                   </div>
                 </div>
               </SwiperSlide>
+            ))} */}
+
+
+            {IMAGES?.map((imageUrl, index) => (
+
+
+              <SwiperSlide key={index}>
+
+                <div className="item">
+                  <Image
+                    width={856}
+                    height={554}
+                    priority
+                    style={{ objectFit: "cover" }}
+                    // className="w-100 h-100"
+                    src={imageUrl}
+                    alt={`Image ${index + 1}`}
+                  />
+
+
+                </div>
+              </SwiperSlide>
             ))}
+
+
           </Swiper>
 
           <Swiper
@@ -98,14 +122,14 @@ export default function ProductGallery({ IMAGES }) {
             modules={[FreeMode, Navigation, Thumbs]}
             className="mySwiper mt-2 thumb-gallery-opacity"
           >
-            {slides.map((slide, index) => (
+            {IMAGES?.map((imageUrl, index) => (
               <SwiperSlide key={index}>
                 <Image
                   width={163}
                   height={106}
                   priority
                   style={{ objectFit: "cover" }}
-                  src={slide.imageSrc}
+                  src={imageUrl}
                   alt="thum car"
                 />
               </SwiperSlide>
@@ -114,12 +138,7 @@ export default function ProductGallery({ IMAGES }) {
         </div>
       </div>
 
-      <ModalVideo
-        channel="youtube"
-        isOpen={isOpen}
-        videoId={videoId}
-        onClose={() => setOpen(false)}
-      />
+
     </>
   );
 }

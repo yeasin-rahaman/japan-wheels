@@ -12,7 +12,8 @@ const WhatsappButton = () => {
                         alt="header-logo2.svg"
                     />
                 </button>
-            </a></>
+            </a>
+        </>
     );
 };
 
