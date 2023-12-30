@@ -1,12 +1,12 @@
 "use client"
 
-import BreadCrumb from "@/app/OurComponents/listing/BreadCrumb";
-import Descriptions from "@/app/OurComponents/listing/Descriptions";
-import Features from "@/app/OurComponents/listing/Features";
-import Overview from "@/app/OurComponents/listing/Overview";
-import ProductGallery from "@/app/OurComponents/listing/ProductGallery";
-import SellerDetail2 from "@/app/OurComponents/listing/SellerDetail2";
-import ShareMeta from "@/app/OurComponents/listing/ShareMeta";
+import BreadCrumb from "@/app/OurComponents/listings/BreadCrumb";
+import Descriptions from "@/app/OurComponents/listings/Descriptions";
+import Features from "@/app/OurComponents/listings/Features";
+import Overview from "@/app/OurComponents/listings/Overview";
+import ProductGallery from "@/app/OurComponents/listings/ProductGallery";
+import SellerDetail2 from "@/app/OurComponents/listings/SellerDetail2";
+import ShareMeta from "@/app/OurComponents/listings/ShareMeta";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
