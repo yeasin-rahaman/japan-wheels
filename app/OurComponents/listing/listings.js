@@ -3,7 +3,9 @@ import ListGridFilter2 from './ListGridFilter2';
 import SidebarAdvnaceFilter from './SidebarAdvanceFilter';
 import CarItems from './CarItems';
 
-const listings = () => {
+const Listings = ({ listingCars, listName }) => {
+
+    console.log(listingCars);
     return (
         <div className="wrapper">
             {/* Inner Page Breadcrumb */}
@@ -13,7 +15,7 @@ const listings = () => {
                         <div className="col-xl-12">
                             <div className="breadcrumb_content">
                                 <h2 className="breadcrumb_title">Used Vehicles For Sale</h2>
-                                <p className="subtitle">Listings v6</p>
+                                <p className="subtitle">{listName}</p>
                                 <ol className="breadcrumb fn-767 mt10-sm">
                                     <li className="breadcrumb-item">
                                         <a href="#">Home</a>
@@ -40,7 +42,7 @@ const listings = () => {
 
                         <div className="col-lg-8 col-xl-9">
                             <ListGridFilter2
-                                listingCars={listingCars.length}
+                                listingCars={listingCars?.length}
                             />
 
                             <div className="row">
@@ -74,7 +76,8 @@ const listings = () => {
             </section>
             {/* Listing Grid View */}
         </div>
+        // End wrapper
     );
 };
 
-export default listings;
+export default Listings;

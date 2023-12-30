@@ -11,7 +11,7 @@ const CarItems = ({ listingCars }) => {
         // listingCars.slice(0, 9).map((listing) => (
         listingCars.map((listing) => (
           <div className="col-sm-6 col-xl-4" key={listing.ID}>
-            <Link href={`listings/${listing.ID}`}>
+            <Link href={`one-price/${listing.ID}`}>
               <div className="car-listing">
                 <div className="thumb">
                   {listing.AUCTION ? (

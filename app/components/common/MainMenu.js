@@ -6,30 +6,93 @@ import { usePathname } from "next/navigation";
 
 const MainMenu = () => {
     const path = usePathname();
+
+
     const links = [
-        { label: "Home", path: "/" },
+        {
+            label: "Home", path: "/",
+            subMenu: [
 
-        { label: "Listings", path: "/listings" },
-        { label: "One Price", path: "/one-price" },
-        { label: "About Us", path: "/about-us" },
-        { label: "Blogs", path: "/blogs" },
+            ],
+        },
 
-        { label: "Service", path: "/service" },
+        {
+            label: "Listings",
+
+            subMenu: [
+                { label: "Auctions", path: "/auctions" },
+                { label: "One Price", path: "/one-price" }
+
+            ],
+
+
+        },
+        {
+            label: "About Us", path: "about-us",
+            subMenu: [
+
+            ],
+        },
+        {
+            label: "Blogs", path: "blogs",
+            subMenu: [
+
+            ],
+        },
+        {
+
+            label: "Service", path: "service",
+            subMenu: [
+
+            ],
+        },
+
+
     ];
+
+
     return (
         <>
-            {/* {menuItems.map((menuItem, index) => (
+            {links.map((menuItem, index) => (
                 <li className="dropitem" key={index}>
                     <a
                         className={
                             isParentActive(menuItem.subMenu, path)
-                                ? "active"
-                                : ""
+                                ? "active d-flex"
+                                : "d-flex"
                         }
                         href="#"
                     >
-                        <span className="title">{menuItem.label}</span>
-                        <span className="arrow"></span>
+                        {
+                            !menuItem.subMenu.length ?
+                                <>
+
+                                    <Link
+                                        className={
+                                            path ===
+                                                menuItem.path
+                                                ? "active"
+                                                : ""
+                                        }
+                                        href={
+                                            menuItem.path
+                                        }
+                                    >
+                                        {
+                                            menuItem.label
+                                        }
+                                    </Link>
+
+
+                                </>
+                                :
+                                <> <span className="title">{menuItem.label}</span>
+                                    <span className="arrow"></span></>
+                        }
+
+
+
+
                     </a>
                     <ul className="sub-menu">
                         {menuItem?.subMenu.map((subItem, subIndex) => (
@@ -93,12 +156,12 @@ const MainMenu = () => {
                         ))}
                     </ul>
                 </li>
-            ))} */}
-            {links.map((link, index) => (
+            ))}
+            {/* {links.map((link, index) => (
                 <li className="list-inline-item" key={index}>
                     <Link href={link.path}>{link.label}</Link>
                 </li>
-            ))}
+            ))} */}
         </>
     );
 };
