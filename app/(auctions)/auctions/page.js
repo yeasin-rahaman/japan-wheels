@@ -1,5 +1,5 @@
 "use client"
-import Listings from '@/app/OurComponents/listing/Listings';
+import Listings from './../../OurComponents/listing/Listings';
 import React, { useEffect, useState } from 'react';
 
 const page = () => {
