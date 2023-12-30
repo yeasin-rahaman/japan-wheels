@@ -8,7 +8,7 @@ const Listings = ({ listingCars, listName }) => {
     console.log(listingCars);
     return (
         <div className="wrapper">
-            {/* Inner Page Breadcrumb */}
+            {/* Inner Page Breadcrumb  */}
             <section className="inner_page_breadcrumb">
                 <div className="container">
                     <div className="row">
