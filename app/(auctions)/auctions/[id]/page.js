@@ -15,7 +15,22 @@ const ListingSingleV3 = () => {
 
   const [details, setDetails] = useState([]);
 
+  const detailsData = details[0]
+  const imageUrls = detailsData?.IMAGES?.split('#').reverse()
+  const modelID = detailsData?.MODEL_ID
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`https://api.japanwheels.com/api/stats?model_id=${modelID}&page=${1}&size=${2}`);
+        const data = await response.json();
+        console.log("stat auction", data);
 
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, [modelID]); // The empty dependency array ensures this effect runs only once on 
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,8 +44,7 @@ const ListingSingleV3 = () => {
 
     fetchData();
   }, [id]); // The empty dependency array ensures this effect runs only once on 
-  const detailsData = details[0]
-  const imageUrls = detailsData?.IMAGES?.split('#').reverse()
+
 
   return (
     <>

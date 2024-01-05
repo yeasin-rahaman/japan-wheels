@@ -1,17 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-const CarItems = ({ listingCars }) => {
-
-
+const CarItems = ({ listingCars, listName, routeLink }) => {
+  console.log("cartitem", routeLink);
   return (
     <>
-
-
       {
         // listingCars.slice(0, 9).map((listing) => (
-        listingCars.map((listing) => (
+        listingCars?.map((listing) => (
           <div className="col-sm-6 col-xl-4" key={listing.ID}>
-            <Link href={`one-price/${listing.ID}`}>
+            <Link href={`${routeLink}/${listing.ID}`}>
               <div className="car-listing">
                 <div className="thumb">
                   {listing.AUCTION ? (
@@ -39,7 +36,7 @@ const CarItems = ({ listingCars }) => {
                       objectFit: "cover",
                     }}
                     priority
-                    src={listing.IMAGES.split('#')[0].replace(/&h=50/, '&w=320')}  // Use only the first image URL
+                    src={listing?.IMAGES?.split('#')[0].replace(/&h=50/, '&w=320')}  // Use only the first image URL
                     alt={""}
                   />
 

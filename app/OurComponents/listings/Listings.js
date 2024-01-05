@@ -3,7 +3,7 @@ import ListGridFilter2 from './ListGridFilter2';
 import SidebarAdvnaceFilter from './SidebarAdvanceFilter';
 import CarItems from './CarItems';
 
-const Listings = ({ listingCars, listName }) => {
+const Listings = ({ listingCars, listName, totalListing, routeLink }) => {
 
     console.log(listingCars);
     return (
@@ -39,19 +39,27 @@ const Listings = ({ listingCars, listName }) => {
                             <SidebarAdvnaceFilter />
                         </div>
                         {/* End .col-lg-4 */}
+                        {
+                            listingCars?.length !== 0 ?
 
-                        <div className="col-lg-8 col-xl-9">
-                            <ListGridFilter2
-                                listingCars={listingCars?.length}
-                            />
+                                <div className="col-lg-8 col-xl-9">
+                                    <ListGridFilter2
+                                        totalListing={totalListing}
+                                    />
 
-                            <div className="row">
-                                <CarItems
-                                    listingCars={listingCars}
-                                />
-                            </div>
-                            {/* End .row */}
-                        </div>
+                                    <div className="row">
+                                        <CarItems
+                                            listingCars={listingCars}
+                                            listName={listName}
+                                            routeLink={routeLink}
+                                        />
+                                    </div>
+                                    {/* End .row */}
+                                </div>
+                                :
+                                <></>
+
+                        }
                         {/* End .col-lg-8 */}
                     </div>
                     {/* End .row */}
