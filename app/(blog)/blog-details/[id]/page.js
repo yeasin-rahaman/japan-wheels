@@ -92,7 +92,7 @@ const BlogDynamicSingle = () => {
                     allowAttributes
                     allowElements
                     disableLineBreaks={true}
-                    style={{textAlign: 'justify'}}
+                    style={{ textAlign: 'justify' }}
                     content={blog?.description}
                   />
 
