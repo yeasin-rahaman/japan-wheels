@@ -216,6 +216,136 @@ const HeroFilter = () => {
       ],
     },
   ];
+  const onePriceFilters = [
+    {
+      label: "Make",
+      options: [
+        "Select Makes",
+        "Audi",
+        "Bentley",
+        "BMW",
+        "Ford",
+        "Honda",
+        "Mercedes",
+      ],
+    },
+    {
+      label: "Models",
+      options: ["Select Models", "A3 Sportback", "A4", "A6", "Q5"],
+    },
+    {
+      label: "Price",
+      options: [
+        "All Price",
+        "No max Price",
+        "$2,000",
+        "$5,000",
+        "$10,000",
+        "$15,000",
+        "$6,000",
+      ],
+    },
+    {
+      label: "Make",
+      options: [
+        "Select Makes",
+        "Audi",
+        "Bentley",
+        "BMW",
+        "Ford",
+        "Honda",
+        "Mercedes",
+      ],
+    },
+    {
+      label: "Models",
+      options: ["Select Models", "A3 Sportback", "A4", "A6", "Q5"],
+    },
+    {
+      label: "Price",
+      options: [
+        "All Price",
+        "No max Price",
+        "$2,000",
+        "$5,000",
+        "$10,000",
+        "$15,000",
+        "$6,000",
+      ],
+    },
+    {
+      label: "Price",
+      options: [
+        "All Price",
+        "No max Price",
+        "$2,000",
+        "$5,000",
+        "$10,000",
+        "$15,000",
+        "$6,000",
+      ],
+    },
+    {
+      label: "Price",
+      options: [
+        "All Price",
+        "No max Price",
+        "$2,000",
+        "$5,000",
+        "$10,000",
+        "$15,000",
+        "$6,000",
+      ],
+    },
+    {
+      label: "Price",
+      options: [
+        "All Price",
+        "No max Price",
+        "$2,000",
+        "$5,000",
+        "$10,000",
+        "$15,000",
+        "$6,000",
+      ],
+    },
+    {
+      label: "Price",
+      options: [
+        "All Price",
+        "No max Price",
+        "$2,000",
+        "$5,000",
+        "$10,000",
+        "$15,000",
+        "$6,000",
+      ],
+    },
+    {
+      label: "Price",
+      options: [
+        "All Price",
+        "No max Price",
+        "$2,000",
+        "$5,000",
+        "$10,000",
+        "$15,000",
+        "$6,000",
+      ],
+    },
+    {
+      label: "Price",
+      options: [
+        "All Price",
+        "No max Price",
+        "$2,000",
+        "$5,000",
+        "$10,000",
+        "$15,000",
+        "$6,000",
+      ],
+    },
+  ];
 
   const handleStatusClick = (status) => {
     setSelectedStatus(status);
@@ -242,6 +372,18 @@ const HeroFilter = () => {
             onClick={() => handleStatusClick("Auto Parts")}
           >
             Auto Parts
+          </button>
+        </li>
+        <li className="nav-item" role-presentation="">
+          <button
+            className={`nav-link ${
+              selectedStatus === "One Price" && "active"
+            }`}
+            style={{width:'150px'}}
+
+            onClick={() => handleStatusClick("One Price")}
+          >
+            One Price
           </button>
         </li>
       </ul>
@@ -278,7 +420,22 @@ const HeroFilter = () => {
                     </div>
                   </li>
                 ))
-              : autoPartsFilters.map((filter) => (
+              :selectedStatus == "One Price"?  onePriceFilters.map((filter) => (
+                  <li className="list-inline-item mt-2" key={filter.label}>
+                    <div className="select-boxes">
+                      <div className="car_brand">
+                        <h6 className="title text-white">{filter.label}</h6>
+                        <select className="form-select text-white">
+                          {filter.options.map((option) => (
+                            <option key={option} className="text-dark">
+                              {option}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                )): autoPartsFilters.map((filter) => (
                   <li className="list-inline-item mt-2" key={filter.label}>
                     <div className="select-boxes">
                       <div className="car_brand">

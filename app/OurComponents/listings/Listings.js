@@ -52,6 +52,7 @@ const Listings = ({ listingCars, listName, totalListing, routeLink }) => {
                                             listingCars={listingCars}
                                             listName={listName}
                                             routeLink={routeLink}
+                                            totalListing={totalListing}
                                         />
                                     </div>
                                     {/* End .row */}

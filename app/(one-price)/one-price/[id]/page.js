@@ -7,30 +7,44 @@ import Overview from "@/app/OurComponents/listings/Overview";
 import ProductGallery from "@/app/OurComponents/listings/ProductGallery";
 import SellerDetail2 from "@/app/OurComponents/listings/SellerDetail2";
 import ShareMeta from "@/app/OurComponents/listings/ShareMeta";
+import { saveCarDetailsPaginationData } from "@/app/Redux/dataSlice";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+
 
 const ListingSingleV3 = () => {
+  const dispatch = useDispatch();
+  const CarDetailsPaginationData = useSelector((state) => state.japanwheels?.carDetailsPaginationData);
+  useEffect(() => {
+    dispatch(saveCarDetailsPaginationData({ page: 1 }))
+  }, []);
+
+
+  console.log("CarDetailsPaginationData:", CarDetailsPaginationData)
   const { id } = useParams({});
 
   const [details, setDetails] = useState([]);
-
+  const [statestics, setStatestics] = useState({});
+  const size = 15;
   const detailsData = details[0]
   const imageUrls = detailsData?.IMAGES?.split('#').reverse()
   const modelID = detailsData?.MODEL_ID
+  console.log(modelID);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://api.japanwheels.com/api/stats?model_id=${modelID}&page=${1}&size=${2}`);
+        const response = await fetch(`https://api.japanwheels.com/api/stats?model_id=${modelID}&page=${CarDetailsPaginationData?.page}&size=${size}`);
         const data = await response.json();
         console.log("stat one price", data);
+        setStatestics(data);
 
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
     fetchData();
-  }, [modelID]); // The empty dependency array ensures this effect runs only once on 
+  }, [modelID, CarDetailsPaginationData?.page]); // The empty dependency array ensures this effect runs only once on 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -81,9 +95,9 @@ const ListingSingleV3 = () => {
 
                         </ul>
                         <h2 className="title">{detailsData?.MODEL_NAME}</h2>
-                        <p className="para">
+                        {/* <p className="para">
                           2.0h T8 11.6kWh Polestar Engineered Auto AWD (s/s) 5dr
-                        </p>
+                        </p> */}
                       </div>
                     </div>
                   </div>
@@ -154,23 +168,10 @@ const ListingSingleV3 = () => {
                 {/* End .row top portion*/}
 
                 <div className="row">
-                  <div className="col-lg-6 col-xl-6">
-                    <div className="user_profile_service">
-                      <Features />
-                      <hr />
-                      <div className="row">
-                        <div className="col-lg-12">
-                          <a className="fz12 tdu color-blue" href="#">
-                            View all features
-                          </a>
-                        </div>
-                      </div>
-                    </div>
 
-                  </div>
-                  {/* End .col-xl-6 */}
 
-                  <div className="col-lg-6 col-xl-6">
+
+                  {/* <div className="col-lg-6 col-xl-6">
                     <div className="listing_single_description mt30">
                       <h4 className="mb30">
                         Description{" "}
@@ -180,9 +181,23 @@ const ListingSingleV3 = () => {
                         imageUrls={imageUrls}
                       />
                     </div>
-                    {/* End car descriptions */}
+                  </div> */}
 
 
+
+
+                  <div className="col-lg-12 col-xl-12">
+                    <div className="user_profile_service">
+                      <Features tableData={statestics} />
+                      <hr />
+                      <div className="row">
+                        <div className="col-lg-12">
+                          <a className="fz12 tdu color-blue" href="#">
+                            View all features
+                          </a>
+                        </div>
+                      </div>
+                    </div>
 
                   </div>
                 </div>

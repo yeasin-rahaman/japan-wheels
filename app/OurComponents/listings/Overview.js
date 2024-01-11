@@ -3,6 +3,7 @@ const Overview = ({ detailsData }) => {
     { label: "Make", value: "Volvo" },
     { label: "Model", value: "XC 90" },
     { label: "Color", value: "white" },
+    { label: "Price", value: "120" },
     { label: "Drive Type", value: "4x4" },
     { label: "Transmission", value: "Automatic" },
     { label: "Condition", value: "Used" },
@@ -49,6 +50,13 @@ const Overview = ({ detailsData }) => {
           <div className="day">Color</div>
         </div>
         <span className="schedule">{detailsData?.COLOR}</span>
+      </li>
+      <li
+        className="list-group-item d-flex justify-content-between align-items-start">
+        <div className="me-auto">
+          <div className="day">Price</div>
+        </div>
+        <span className="schedule">${detailsData?.AVG_PRICE}</span>
       </li>
 
       <li

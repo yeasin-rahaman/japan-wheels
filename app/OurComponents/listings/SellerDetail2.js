@@ -9,31 +9,34 @@ const SellerDetail2 = () => {
                         width={60}
                         height={60}
                         className="mr-3 author_img w60"
-                        src="/images/partners/3.png"
+                        src="/images/japanwheelsLogo.png"
                         alt="author.png"
                     />
                 </div>
 
                 <div className="flex-grow-1 ms-3">
                     <h5 className="mt0 mb5 fz16 heading-color fw600">
-                        Volvo Cars Istanbul
+
                     </h5>
                     <p className="mb0 tdu">
                         <span className="flaticon-phone-call pr5 vam" />
-                        (302) 555-0107
+                        +81 70-4375-4845
+                        <br />
+                        mustafa@japanwheels.com
                     </p>
                 </div>
             </div>
             {/* End d-flex */}
             <p>
-                The all-new Volvo XC60 is a terrific luxury compact SUV. It&apos;s been
-                fully redesigned...
+                116-002 Arakawa-Ku,
+                Arakawa 3-6-4
+                Tokyo, Japan
             </p>
 
             <div className="row">
                 <div className="col-md-12">
                     <button type="submit" className="btn btn-block btn-thm mt10 mb20">
-                        Send Message
+                        Send Email
                     </button>
                     <a href="https://wa.me/+8801675440454" target="_blank">
                         <button type="submit" className="btn btn-block btn-whatsapp mb0">

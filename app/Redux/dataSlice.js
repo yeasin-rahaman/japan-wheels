@@ -23,6 +23,12 @@ export const getSiteSetting = () => (dispatch) => {
       console.log(e);
     });
 };
+export const saveAuctionSearchData = (searchData) => (dispatch) => {
+  dispatch(setAuctionSearchData(searchData))
+};
+export const saveCarDetailsPaginationData = (paginationData) => (dispatch) => {
+  dispatch(setCarDetailsPaginationData(paginationData))
+};
 export const getBlogs = (page) => (dispatch) => {
   const authTOKEN = {
     headers: {
@@ -73,6 +79,8 @@ const initialState = {
   userInfo: {},
   blogs: {},
   blog: {},
+  auctionSearchData: {},
+  carDetailsPaginationData: {},
 };
 
 const dataSlice = createSlice({
@@ -84,6 +92,12 @@ const dataSlice = createSlice({
     },
     setSiteSetting: (state, action) => {
       state.siteSetting = action.payload ? action.payload : [];
+    },
+    setAuctionSearchData: (state, action) => {
+      state.auctionSearchData = action.payload ? action.payload : {};
+    },
+    setCarDetailsPaginationData: (state, action) => {
+      state.carDetailsPaginationData = action.payload ? action.payload : {};
     },
     setBlogs: (state, action) => {
       state.blogs = action.payload ? action.payload : [];
@@ -97,6 +111,6 @@ const dataSlice = createSlice({
   },
 });
 
-export const { setMenus, setSiteSetting, setUserInfo, setBlogs,setBlog } =
+export const { setMenus, setSiteSetting, setUserInfo, setBlogs, setBlog, setAuctionSearchData, setCarDetailsPaginationData } =
   dataSlice.actions;
 export default dataSlice.reducer;
