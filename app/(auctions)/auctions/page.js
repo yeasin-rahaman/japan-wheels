@@ -27,6 +27,7 @@ const Auction = () => {
       }&marka_id:${auctionSearchData.model
       }&grade&lot&auction&auction_date&eng_v&pw&kuzov`
     )
+
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

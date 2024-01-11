@@ -31,6 +31,7 @@ const OnePrice = () => {
             });
     }, [auctionSearchData]);
 
+
     return (
         <div>
             <Listings
