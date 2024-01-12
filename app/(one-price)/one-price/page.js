@@ -12,7 +12,7 @@ const OnePrice = () => {
     const [onePrice, setOnePrice] = useState([]);
     const listName = "One-Price"
     const routeLink = "one-price"
-
+    console.log(auctionSearchData.MARKA_NAME);
     useEffect(() => {
 
 

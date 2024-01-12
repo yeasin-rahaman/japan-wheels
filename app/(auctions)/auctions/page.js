@@ -17,17 +17,10 @@ const Auction = () => {
   console.log(totalListing);
   const listName = 'auctions';
   const routeLink = 'auctions';
-
+  console.log(auctionSearchData.MARKA_NAME);
   useEffect(() => {
     fetch(
-      `https://api.japanwheels.com/api/vehicles?page=${auctionSearchData?.page
-      }&size=${auctionSearchData?.size}&model=${auctionSearchData.model
-      }&model_id=${auctionSearchData?.modelId}&from_year=${auctionSearchData?.fromYear}&to_year=${auctionSearchData?.toYear}&color=${auctionSearchData?.color
-      }&from_mileage=${auctionSearchData?.minMileage}&to_mileage=${auctionSearchData?.maxMileage
-      }&marka_id:${auctionSearchData.model
-      }&grade&lot&auction&auction_date&eng_v&pw&kuzov`
-    )
-
+      `https://api.japanwheels.com/api/vehicles?page=${auctionSearchData?.page}&size=${auctionSearchData?.size}&model="TOYOTA"&model_id=${auctionSearchData?.modelId || ''}&from_year=${auctionSearchData?.fromYear || ''}&to_year=${auctionSearchData?.toYear || ''}&color=${auctionSearchData?.color || ''}&from_mileage=${auctionSearchData?.minMileage || ""}&to_mileage=${auctionSearchData?.maxMileage || ""}&grade&lot&auction&auction_date&eng_v&pw&kuzov`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -42,12 +35,16 @@ const Auction = () => {
       });
   }, [auctionSearchData]);
 
+
+
+
+
   return (
     <div>
       <Listings
         listName={listName}
-        listingCars={auction?.data}
-        totalListing={auction?.total}
+        listingCars={auction.data}
+        totalListing={auction.total}
         routeLink={routeLink}>
       </Listings>
     </div>
