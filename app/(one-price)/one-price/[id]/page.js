@@ -26,7 +26,7 @@ const ListingSingleV3 = () => {
 
   const [details, setDetails] = useState([]);
   const [statestics, setStatestics] = useState({});
-  const size = 15;
+  const size = 5;
   const detailsData = details[0]
   const imageUrls = detailsData?.IMAGES?.split('#').reverse()
   const modelID = detailsData?.MODEL_ID
@@ -34,7 +34,7 @@ const ListingSingleV3 = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://api.japanwheels.com/api/stats?model_id=${modelID}&page=${CarDetailsPaginationData?.page}&size=${size}`);
+        const response = await fetch(`https://api.japanwheels.com/api/stats?model_id=${detailsData.MODEL_NAME}&page=${CarDetailsPaginationData?.page}&size=${size}`);
         const data = await response.json();
         console.log("stat one price", data);
         setStatestics(data);
@@ -44,7 +44,7 @@ const ListingSingleV3 = () => {
       }
     };
     fetchData();
-  }, [modelID, CarDetailsPaginationData?.page]); // The empty dependency array ensures this effect runs only once on 
+  }, [detailsData, CarDetailsPaginationData?.page]); // The empty dependency array ensures this effect runs only once on 
 
   useEffect(() => {
     const fetchData = async () => {

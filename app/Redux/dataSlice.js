@@ -24,6 +24,7 @@ export const getSiteSetting = () => (dispatch) => {
     });
 };
 export const saveAuctionSearchData = (searchData) => (dispatch) => {
+  console.log({ searchData });
   dispatch(setAuctionSearchData(searchData))
 };
 export const saveCarDetailsPaginationData = (paginationData) => (dispatch) => {

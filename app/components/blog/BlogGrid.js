@@ -32,11 +32,17 @@ const BlogGrid = () => {
   };
 
   // Calculate the range of pages to display (current page, previous 2, and next 2)
-  const pageRange = Array.from({ length: 5 }, (_, index) => {
-    const pageIndex = currentPage - 2 + index;
+  const pageRange = Array.from({ length: 3 }, (_, index) => {
+    let pagePositionMath = 0;
+    if (currentPage == 1) {
+      pagePositionMath = 0;
+    } else {
+      pagePositionMath = 1;
+    }
+    const pageIndex = currentPage - pagePositionMath + index;
+
     return pageIndex >= 1 && pageIndex <= totalPages ? pageIndex : null;
   });
-
   // Handle First, Previous, Next, and Last buttons
   const handleFirst = () => setCurrentPage(1);
   const handlePrevious = () => setCurrentPage(currentPage - 1);
