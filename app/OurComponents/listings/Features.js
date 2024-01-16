@@ -135,9 +135,9 @@ const Features = ({ tableData }) => {
                       </div>
                     </div>
                   </th>
-                  <td className='align-middle'>{car.LOT}</td>
                   <td className='align-middle'>{car.MARKA_NAME}</td>
-                  <td className='align-middle'>{car.AUCTION_DATE}</td>
+                  <td className='align-middle'>{car.LOT}</td>
+                  <td className='align-middle'>{car.AUCTION_DATE.split(' ')[0]}</td>
                   <td className='align-middle'>{car.ENG_V}</td>
                   <td className='align-middle'>{car.fuelType}</td>
                   <td className='align-middle'>{car.MILEAGE}</td>
