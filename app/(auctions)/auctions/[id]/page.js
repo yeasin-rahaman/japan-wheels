@@ -37,7 +37,7 @@ const ListingSingleV3 = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://api.japanwheels.com/api/stats?model_id=${detailsData.MODEL_NAME}&page=${CarDetailsPaginationData?.page}&size=${size}`
+          `https://api.japanwheels.com/api/stats?model_id=${detailsData.MODEL_NAME}&page=${CarDetailsPaginationData?.page}&size=${5}`
         );
         const data = await response.json();
         console.log('stat auction', data);

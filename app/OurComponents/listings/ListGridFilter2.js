@@ -14,7 +14,7 @@ const ListGridFilter2 = ({ totalListing }) => {
   );
 
   const sizes = [30, 50, 100, 200, 300, 400, 500];
-  const [selectedSize, setSelectedSize] = useState(sizes[0]); // Set the default selected size
+  const [selectedSize, setSelectedSize] = useState(sizes[30]); // Set the default selected size
   console.log(
     '🚀 ~ file: ListGridFilter2.js:24 ~ ListGridFilter2 ~ selectedSize:',
     selectedSize

@@ -34,7 +34,7 @@ const ListingSingleV3 = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://api.japanwheels.com/api/stats?model_id=${detailsData.MODEL_NAME}&page=${CarDetailsPaginationData?.page}&size=${size}`);
+        const response = await fetch(`https://api.japanwheels.com/api/stats?model_id=${detailsData.MODEL_NAME}&page=${CarDetailsPaginationData?.page}&size=${5}`);
         const data = await response.json();
         console.log("stat one price", data);
         setStatestics(data);

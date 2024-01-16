@@ -23,7 +23,7 @@ const Auction = () => {
     console.log('auctionSearchData:', auctionSearchData);
     fetch(
       // `https://api.japanwheels.com/api/vehicles?page=${auctionSearchData?.page}&size=${auctionSearchData?.size}&MARKA_NAME=${auctionSearchData.MARKA_NAME}&from_year=${auctionSearchData?.fromYear}&to_year=${auctionSearchData?.toYear}&color=${auctionSearchData?.color}&from_mileage=${auctionSearchData?.minMileage}&to_mileage=${auctionSearchData?.maxMileage}&grade&lot&auction&auction_date&eng_v&pw&kuzov`)
-      `https://api.japanwheels.com/api/vehicles?page=${auctionSearchData?.page || ""}&size=${auctionSearchData?.size || ""}&MARKA_NAME=${auctionSearchData?.brand || ""}&MODEL_NAME=${auctionSearchData?.model || ""}&from_year=${auctionSearchData?.yearMin || ""}&to_year=${auctionSearchData?.yearMax || ""}&color=${auctionSearchData?.color || ""}&from_mileage=${""}&to_mileage=${""}&grade&lot&auction&auction_date&eng_v&pw&kuzov`)
+      `https://api.japanwheels.com/api/vehicles?page=${auctionSearchData?.page || 1}&size=${auctionSearchData?.size || 30}&MARKA_NAME=${auctionSearchData?.brand || ""}&MODEL_NAME=${auctionSearchData?.model || ""}&from_year=${auctionSearchData?.yearMin || ""}&to_year=${auctionSearchData?.yearMax || ""}&color=${auctionSearchData?.color || ""}&from_mileage=${""}&to_mileage=${""}&grade&lot&auction&auction_date&eng_v&pw&kuzov`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
